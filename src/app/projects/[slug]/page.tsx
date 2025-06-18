@@ -1,3 +1,4 @@
+
 import { getProjectBySlug, projects } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -82,7 +83,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <h4 className="text-lg font-bold font-headline mb-3 text-foreground">Technologies Used:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-3 py-1 text-sm">
+              <Badge 
+                key={tech} 
+                variant="outline" 
+                className="border-black text-black bg-transparent px-3 py-1 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+              >
                 {tech}
               </Badge>
             ))}

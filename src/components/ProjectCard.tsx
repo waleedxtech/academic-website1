@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Project } from '@/types';
@@ -43,7 +44,11 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
           <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-1.5">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-2.5 py-0.5 text-xs">
+              <Badge 
+                key={tech} 
+                variant="outline" 
+                className="border-black text-black bg-transparent px-2.5 py-0.5 text-xs hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+              >
                 {tech}
               </Badge>
             ))}
