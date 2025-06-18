@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { BookText } from 'lucide-react'; 
@@ -23,7 +24,7 @@ const publicationData: PublicationItem[] = [
 
 export default function PublicationsSection() {
   return (
-    <Section id="publications" title="Publications" subtitle="Contributions to Academic Literature">
+    <Section id="publications" title="Publications" subtitle="">
       <div className="space-y-8">
         {publicationData.map((item, index) => (
           <Card 

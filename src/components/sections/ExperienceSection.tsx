@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, CalendarDays } from 'lucide-react'; 
@@ -32,7 +33,7 @@ const internshipData: InternshipItem[] = [
 
 export default function ExperienceSection() {
   return (
-    <Section id="experience" title="Work Experience" subtitle="Internships and Practical Training">
+    <Section id="experience" title="Work Experience" subtitle="">
       <div className="space-y-12">
         {internshipData.map((item, index) => (
           <Card 

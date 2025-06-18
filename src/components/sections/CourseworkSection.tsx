@@ -1,6 +1,7 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen } from 'lucide-react'; // Using BookOpen as a generic icon for courses
+import { BookOpen } from 'lucide-react'; 
 
 const courseworkData = [
   "Power Distribution and Utilization",
@@ -15,7 +16,7 @@ const courseworkData = [
 
 export default function CourseworkSection() {
   return (
-    <Section id="coursework" title="Relevant Coursework" subtitle="Key Academic Areas of Study">
+    <Section id="coursework" title="Relevant Coursework" subtitle="">
       <div className="flex flex-wrap justify-center gap-3 md:gap-4">
         {courseworkData.map((course, index) => (
           <div

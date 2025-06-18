@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/lib/data';
@@ -9,7 +10,7 @@ const featuredProjects = projects.slice(0, 3);
 
 export default function ProjectsSection() {
   return (
-    <Section id="projects" title="Featured Projects" subtitle="A Selection of My Work">
+    <Section id="projects" title="Featured Projects" subtitle="">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {featuredProjects.map((project, index) => (
           <ProjectCard 

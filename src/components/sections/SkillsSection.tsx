@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -46,7 +47,7 @@ const skillsData: SkillCategory[] = [
 
 export default function SkillsSection() {
   return (
-    <Section id="skills" title="Technical Skills & Abilities" subtitle="My Engineering Toolbox">
+    <Section id="skills" title="Technical Skills & Abilities" subtitle="">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillsData.map((skillCategory, index) => (
           <Card 

@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FlaskConical, CalendarDays } from 'lucide-react'; 
@@ -36,7 +37,7 @@ const researchData: ResearchItem[] = [
 
 export default function ResearchSection() {
   return (
-    <Section id="research" title="Research Experience" subtitle="Academic Research and Development Projects">
+    <Section id="research" title="Research Experience" subtitle="">
       <div className="space-y-12">
         {researchData.map((item, index) => (
           <Card 

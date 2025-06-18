@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Trophy, Star, Users as UsersIcon, Medal } from 'lucide-react'; 
@@ -10,7 +11,7 @@ interface AwardItem {
 const awardsData: AwardItem[] = [
   {
     description: "Gold Medal for securing first position in the entire B.Sc. Electrical Engineering batch/cohort.",
-    icon: Medal // Changed from Trophy to Medal for specificity
+    icon: Medal 
   },
   {
     description: "Gold Medal and prize money winner in Inquizitive'2018, a quiz competition among five engineering departments organized by IEEE UOL Student Branch.",
@@ -36,7 +37,7 @@ const awardsData: AwardItem[] = [
 
 export default function AwardsSection() {
   return (
-    <Section id="awards" title="Awards & Achievements" subtitle="Recognitions of Dedication and Excellence">
+    <Section id="awards" title="Awards & Achievements" subtitle="">
       <Card className="bg-white rounded-xl shadow-lg">
         <CardContent className="p-6 md:p-8">
           <ul className="space-y-4">

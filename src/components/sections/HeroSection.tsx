@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -7,9 +8,9 @@ export default function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center md:justify-start order-first md:order-first animate-fade-in">
-            <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl group">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center">
+          <div className="md:col-span-1 lg:col-span-2 flex justify-center animate-fade-in order-first">
+            <div className="relative w-56 h-56 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"
                 alt="W. Abdullah - Electrical Engineer"
@@ -21,7 +22,7 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="md:col-span-2 lg:col-span-3 space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
               Waleed Abdullah
             </h1>
