@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Mail, Linkedin, Github, GraduationCap, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -31,7 +32,7 @@ const contactMethods = [
     ariaLabel: 'View Waleed Abdullah\'s GitHub Profile',
   },
   {
-    name: 'Scholar',
+    name: 'Google Scholar',
     icon: GraduationCap,
     value: 'Google Scholar',
     href: 'https://scholar.google.com/citations?user=Ald38KsAAAAJ',
@@ -58,7 +59,7 @@ export default function Footer() {
             {emailAndLocation.map((method) => (
               <div 
                 key={method.name} 
-                className="flex items-center gap-2 text-primary-foreground/90 font-body text-sm" // Adjusted styling
+                className="flex items-center gap-2 text-primary-foreground/90 font-body text-sm"
                 aria-label={method.ariaLabel}
               >
                 <method.icon className="h-5 w-5" />
@@ -84,10 +85,10 @@ export default function Footer() {
                 {method.href ? (
                   <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                     <method.icon className="mr-2 h-5 w-5" />
-                    {method.name}
+                    {method.name} 
                   </Link>
                 ) : (
-                   <> {/* Should not reach here for social links as they all have href */}
+                   <>
                     <method.icon className="mr-2 h-5 w-5" />
                     {method.value}
                   </>
