@@ -71,7 +71,7 @@ const certificationsAndTrainingData: CertificationInfo[] = [
 
 export default function EducationSection() {
   return (
-    <Section id="education" showDivider={true} title="Education & Certifications" subtitle="My Academic and Professional Qualifications">
+    <Section id="education" showDivider={true} title="Education & Certifications">
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
         {/* Left Column: Education */}
         <div>

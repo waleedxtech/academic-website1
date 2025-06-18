@@ -1,8 +1,7 @@
 
 import Section from '@/components/ui/Section';
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CircuitBoard, Cpu, Code, Users, TrendingUp } from 'lucide-react';
+import { CircuitBoard, Cpu, Code, Users, TrendingUp, ChevronRight } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface SkillCategory {
@@ -46,7 +45,7 @@ export default function SkillsSection() {
         {skillsData.map((skillCategory, index) => (
           <Card 
             key={skillCategory.category} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in flex flex-col"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="h-2 bg-gradient-to-tr from-sky-100 to-purple-100 dark:from-sky-800 dark:to-purple-800"></div>
@@ -54,18 +53,15 @@ export default function SkillsSection() {
               <skillCategory.icon className="h-10 w-10 text-primary mb-3" />
               <CardTitle className="text-xl font-bold font-headline text-card-foreground">{skillCategory.category}</CardTitle>
             </CardHeader>
-            <CardContent className="text-center p-6 pt-0">
-              <div className="flex flex-wrap justify-center gap-2">
+            <CardContent className="p-6 pt-0 flex-grow">
+              <ul className="space-y-2 text-left">
                 {skillCategory.skills.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="outline" 
-                    className="border-black text-black bg-transparent px-3 py-1 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
-                  >
+                  <li key={skill} className="flex items-center text-card-foreground font-body text-sm">
+                    <ChevronRight className="h-4 w-4 mr-2 text-primary flex-shrink-0" />
                     {skill}
-                  </Badge>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </CardContent>
           </Card>
         ))}
@@ -73,4 +69,3 @@ export default function SkillsSection() {
     </Section>
   );
 }
-
