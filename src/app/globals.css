@@ -99,17 +99,16 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground; /* Use THEMED background and foreground */
-    font-family: 'Inter', sans-serif; /* Default body font */
+    @apply bg-background text-foreground font-body; /* Uses font-body from tailwind.config.ts */
     scroll-behavior: smooth;
   }
   .dark body {
     @apply bg-background text-foreground; /* Dark theme variables will apply here */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-foreground;
+    @apply font-headline text-foreground; /* Uses font-headline from tailwind.config.ts */
   }
    p, li, span, div {
-     @apply font-body text-foreground;
+     @apply font-body text-foreground; /* Uses font-body from tailwind.config.ts */
   }
 }
