@@ -36,7 +36,7 @@ export default function ContactSection() {
         {contactMethods.map((method, index) => (
           <Card 
             key={method.name} 
-            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
             >
             <CardHeader className="items-center text-center p-6 pb-2">
@@ -64,3 +64,4 @@ export default function ContactSection() {
     </Section>
   );
 }
+

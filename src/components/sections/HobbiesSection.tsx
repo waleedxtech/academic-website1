@@ -23,7 +23,7 @@ const hobbiesData: Hobby[] = [
 export default function HobbiesSection() {
   return (
     <Section id="hobbies" title="Hobbies & Interests" subtitle="What I Do Outside of Engineering">
-      <Card className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg">
+      <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg">
         <CardContent className="p-6 md:p-8">
           <ul className="space-y-4">
             {hobbiesData.map((hobby, index) => (
@@ -42,3 +42,4 @@ export default function HobbiesSection() {
     </Section>
   );
 }
+

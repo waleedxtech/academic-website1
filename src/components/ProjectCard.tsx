@@ -18,7 +18,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
   return (
     <Card 
       className={cn(
-        "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col h-full",
+        "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col h-full",
         className
       )}
       style={style}
@@ -81,3 +81,4 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
     </Card>
   );
 }
+
