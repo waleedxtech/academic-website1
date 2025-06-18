@@ -18,17 +18,17 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <AboutSection className={gradientBackground} />
-      <SkillsSection />
-      <EducationSection className={gradientBackground} />
-      <CourseworkSection />
-      <ResearchSection className={gradientBackground} />
-      <PublicationsSection />
-      <ExperienceSection className={gradientBackground} />
-      <LeadershipExperienceSection />
-      <ProjectsSection className={gradientBackground} />
-      <AwardsSection />
-      <HobbiesSection className={gradientBackground} />
+      <AboutSection /> {/* White background */}
+      <SkillsSection className={gradientBackground} />
+      <EducationSection /> {/* White background */}
+      <CourseworkSection className={gradientBackground} />
+      <ResearchSection /> {/* White background */}
+      <PublicationsSection className={gradientBackground} />
+      <ExperienceSection /> {/* White background */}
+      <LeadershipExperienceSection className={gradientBackground} />
+      <ProjectsSection /> {/* White background */}
+      <AwardsSection className={gradientBackground} />
+      <HobbiesSection /> {/* White background */}
     </>
   );
 }
