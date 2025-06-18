@@ -35,13 +35,13 @@ export default function HeroSection() {
             <div className="flex flex-col items-center md:items-start gap-3 pt-4">
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:waleedabdullah.ee@gmail.com" className="text-sm text-primary font-bold hover:text-primary/80 transition-colors font-body" aria-label="Email waleedabdullah.ee@gmail.com">
+                <a href="mailto:waleedabdullah.ee@gmail.com" className="text-sm text-primary hover:text-primary/80 transition-colors font-body" aria-label="Email waleedabdullah.ee@gmail.com">
                   waleedabdullah.ee@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-sm text-primary font-bold font-body">Lahore, Pakistan</span>
+                <span className="text-sm text-primary font-body">Lahore, Pakistan</span>
               </div>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
                 <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-primary hover:text-primary-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-primary">
