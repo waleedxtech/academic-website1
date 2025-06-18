@@ -8,16 +8,18 @@ export default function HeroSection() {
     <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square md:aspect-[3/4] rounded-xl overflow-hidden shadow-2xl group order-first md:order-first animate-fade-in">
-            <Image
-              src="https://placehold.co/400x500.png"
-              alt="W. Abdullah - Electrical Engineer"
-              data-ai-hint="professional engineer"
-              layout="fill"
-              objectFit="cover"
-              className="transform transition-all duration-500 ease-in-out group-hover:scale-105"
-              priority
-            />
+          <div className="flex justify-center md:justify-start order-first md:order-first animate-fade-in">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl group">
+              <Image
+                src="https://placehold.co/400x500.png"
+                alt="W. Abdullah - Electrical Engineer"
+                data-ai-hint="professional engineer"
+                layout="fill"
+                objectFit="cover"
+                className="transform transition-all duration-500 ease-in-out group-hover:scale-105"
+                priority
+              />
+            </div>
           </div>
           <div className="space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
@@ -36,10 +38,7 @@ export default function HeroSection() {
                   waleed.abdullah910@gmail.com
                 </a>
               </div>
-              <div 
-                className="flex items-center gap-2" // Removed button styling, made similar to email
-                aria-label="Location: Lahore, Pakistan"
-              >
+              <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-sm text-muted-foreground font-body">Lahore, Pakistan</span>
               </div>
