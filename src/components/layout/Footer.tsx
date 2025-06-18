@@ -28,15 +28,15 @@ const contactMethods = [
     name: 'Scholar',
     icon: GraduationCap,
     value: 'Google Scholar',
-    href: 'https://scholar.google.com/citations?user=Ald38KsAAAAJ', 
+    href: 'https://scholar.google.com/citations?user=Ald38KsAAAAJ',
     ariaLabel: 'View Waleed Abdullah\'s Google Scholar Profile',
   },
   {
     name: 'Location',
     icon: MapPin,
-    value: 'Your City, Country', 
-    href: 'https://maps.google.com/?q=YourCity,YourCountry', 
-    ariaLabel: 'View Waleed Abdullah\'s Location',
+    value: 'Lahore, Pakistan',
+    // href removed to make it non-clickable text
+    ariaLabel: "Waleed Abdullah's Location: Lahore, Pakistan",
   },
 ];
 
@@ -55,14 +55,22 @@ export default function Footer() {
           {contactMethods.map((method) => (
             <Button
               key={method.name}
-              asChild
+              asChild={!!method.href} // This will be false for Location
               variant="outline"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:border-primary-foreground/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105"
+              aria-label={method.ariaLabel}
             >
-              <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={method.ariaLabel}>
-                <method.icon className="mr-2 h-5 w-5" />
-                {method.name === 'Email' ? method.value : `View ${method.name}`}
-              </Link>
+              {method.href ? (
+                <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <method.icon className="mr-2 h-5 w-5" />
+                  {method.name === 'Email' ? method.value : `View ${method.name}`}
+                </Link>
+              ) : (
+                <>
+                  <method.icon className="mr-2 h-5 w-5" />
+                  {method.value}
+                </>
+              )}
             </Button>
           ))}
         </div>

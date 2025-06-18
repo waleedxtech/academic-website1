@@ -36,7 +36,7 @@ export default function HeroSection() {
                   waleed.abdullah910@gmail.com
                 </a>
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
                   <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of Waleed Abdullah">
                     <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
@@ -52,11 +52,13 @@ export default function HeroSection() {
                     <GraduationCap className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
-                  <Link href="https://maps.google.com/?q=YourCity,YourCountry" target="_blank" rel="noopener noreferrer" aria-label="Location of Waleed Abdullah">
-                    <MapPin className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                  </Link>
-                </Button>
+                <div 
+                  className="flex items-center gap-1.5 p-2 px-3 rounded-full border border-input bg-background text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:cursor-default group transition-all duration-300 ease-in-out hover:shadow-md"
+                  aria-label="Location: Lahore, Pakistan"
+                >
+                  <MapPin className="h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors" />
+                  <span className="font-body group-hover:text-accent-foreground transition-colors">Lahore, Pakistan</span>
+                </div>
               </div>
             </div>
           </div>
