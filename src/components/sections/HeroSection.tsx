@@ -37,11 +37,11 @@ export default function HeroSection() {
                 </a>
               </div>
               <div 
-                className="flex items-center gap-1.5 p-2 px-3 rounded-full border border-input bg-background text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:cursor-default group transition-all duration-300 ease-in-out hover:shadow-md"
+                className="flex items-center gap-2" // Removed button styling, made similar to email
                 aria-label="Location: Lahore, Pakistan"
               >
-                <MapPin className="h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors" />
-                <span className="font-body group-hover:text-accent-foreground transition-colors">Lahore, Pakistan</span>
+                <MapPin className="h-5 w-5 text-primary" />
+                <span className="text-sm text-muted-foreground font-body">Lahore, Pakistan</span>
               </div>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
