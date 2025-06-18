@@ -11,21 +11,26 @@ const courseworkData = [
   "Control Systems",
   "Control of DC and AC Drives",
   "Embedded Systems"
+  // "etc." removed as it's vague
 ];
 
 export default function CourseworkSection() {
   return (
-    <Section id="coursework" title="Relevant Coursework" subtitle="Key Academic Areas of Study" className="bg-muted/50">
-      <Card className="shadow-lg">
-        <CardHeader>
-          <CardTitle className="font-headline text-center text-2xl">Core Electrical Engineering Topics</CardTitle>
+    <Section id="coursework" title="Relevant Coursework" subtitle="Key Academic Areas of Study">
+      <Card className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <CardHeader className="p-6">
+          <CardTitle className="text-xl font-bold font-headline text-center text-foreground">Core Electrical Engineering Topics</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-6">
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4">
-            {courseworkData.map((course) => (
-              <li key={course} className="flex items-center text-foreground/90">
-                <CheckCircle className="h-5 w-5 mr-3 text-primary flex-shrink-0" />
-                <span>{course}</span>
+            {courseworkData.map((course, index) => (
+              <li 
+                key={course} 
+                className="flex items-start animate-fade-in"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <span className="flex-shrink-0 w-2 h-2 bg-brand-blue-400 rounded-full mr-3 mt-[0.45em]"></span>
+                <span className="text-foreground/90 font-body">{course}</span>
               </li>
             ))}
           </ul>

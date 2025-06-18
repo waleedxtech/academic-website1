@@ -8,6 +8,17 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem', // px-4
+        sm: '1.5rem',    // sm:px-6
+        lg: '2rem',    // lg:px-8
+      },
+      screens: {
+        '2xl': '1400px', // Corresponds to max-w-6xl for consistency, though 6xl is 1152px. For a wider container use 1400px.
+      },
+    },
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
@@ -65,11 +76,18 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        // Direct color usage from new design system
+        'brand-blue': '#2563eb',    // blue-600
+        'brand-purple': '#7c3aed', // purple-600
+        'brand-gray-800': '#1f2937',
+        'brand-gray-600': '#6b7280',
+        'brand-blue-400': '#60a5fa',
       },
       borderRadius: {
-        lg: 'var(--radius)',
+        lg: 'var(--radius)', // This will be 0.5rem by default from ShadCN
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+        xl: '0.75rem', // explicit 'rounded-xl'
       },
       keyframes: {
         'accordion-down': {
@@ -88,10 +106,15 @@ export default {
             height: '0',
           },
         },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out forwards', // Added 'forwards' to persist end state
       },
     },
   },
