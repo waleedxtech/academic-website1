@@ -7,12 +7,12 @@ interface LifePhilosophySectionProps {
 
 export default function LifePhilosophySection({ className }: LifePhilosophySectionProps) {
   return (
-    <Section 
-      id="life-philosophy" 
-      title="Life Philosophy" 
-      className={className} 
-      showDivider={false} 
-      titleClassName="text-center" 
+    <Section
+      id="life-philosophy"
+      title="Life Philosophy"
+      className={className}
+      showDivider={false}
+      titleClassName="text-center"
       contentClassName="flex justify-center"
     >
       <div className="max-w-3xl text-center bg-background/80 dark:bg-card/70 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-xl border border-border/30">
