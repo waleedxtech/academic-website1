@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-tr from-accent via-purple-700 to-indigo-800 dark:from-accent/80 dark:via-purple-800/80 dark:to-indigo-900/80 text-primary-foreground py-12 md:py-16">
       <div className="container max-w-6xl mx-auto flex flex-col items-center space-y-8">
         <div className="text-center">
-          <h3 className="text-3xl font-bold font-headline mb-2">Get In Touch</h3>
+          <h3 className="text-3xl font-bold font-headline mb-2">Let's connect</h3>
           <p className="text-primary-foreground/80 font-body">
             Feel free to reach out for collaborations or inquiries.
           </p>
