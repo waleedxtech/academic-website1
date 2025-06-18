@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%; /* Slate-50 (approx for dark mode, will be light in light mode) */
+    --foreground: 222.2 84% 4.9%; /* gray-800 (approx) */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 222.2 84% 4.9%; /* gray-800 */
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 100%; /* white */
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220.3 90.2% 52%; /* blue-600 (#2563eb) */
+    --primary-foreground: 210 40% 98%; /* white (for primary button text) */
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 96.1%; /* Default ShadCN secondary - kept for components not explicitly re-themed */
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 20% 65.1%; /* gray-600 (#6b7280) for muted text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 255.1 82.9% 60.8%; /* purple-600 (#7c3aed) */
+    --accent-foreground: 210 40% 98%; /* white (for accent elements if needed) */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 220.3 90.2% 52%; /* blue-600 for focus rings */
 
     --radius: 0.5rem;
 
@@ -53,8 +53,8 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 222.2 84% 4.9%; /* Default dark background */
+    --foreground: 210 40% 98%; /* Default dark foreground */
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -62,16 +62,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220.3 90.2% 52%; /* blue-600 */
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted-foreground: 215 20.2% 65.1%; /* gray-600 */
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 255.1 82.9% 60.8%; /* purple-600 */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -79,13 +79,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --ring: 220.3 90.2% 52%; /* blue-600 */
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -103,14 +97,17 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-50 text-gray-800; /* Use slate-50 for light mode background, gray-800 for text */
     font-family: 'Inter', sans-serif; /* Default body font */
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Added for smooth scrolling */
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-50; /* Dark mode background and text */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline; /* Space Grotesk */
+    @apply font-headline text-foreground; /* Space Grotesk, using themed foreground */
   }
    p, li, span, div /* common text containers */ {
-     @apply font-body; /* Inter */
+     @apply font-body text-foreground; /* Inter, using themed foreground for base text */
   }
 }

@@ -6,7 +6,7 @@ import { Menu, Zap } from 'lucide-react';
 const navItems = [
   { href: '/#about', label: 'About' },
   { href: '/#skills', label: 'Skills' },
-  { href: '/#experience', label: 'Research' },
+  { href: '/#research', label: 'Research' },
   { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
   { href: '/#contact', label: 'Contact' },

@@ -1,77 +1,43 @@
 import Section from '@/components/ui/Section';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Youtube, Cpu, Leaf, UserCheck, HeartPulse, Briefcase, DollarSign, Mountain, Users as NetworkingIcon } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Youtube, Cpu, Leaf, UserCheck, HeartPulse, Briefcase, DollarSign, Mountain, Users as NetworkingIcon, Lightbulb } from 'lucide-react';
 
-const hobbiesData = [
-  {
-    name: "YouTube Channel",
-    description: "Own and manage a YouTube channel with 38K+ subscribers.",
-    icon: Youtube
-  },
-  {
-    name: "Emerging Technologies",
-    description: "Passionate about Agentic AI, LLMs, Blockchain, Smart Grids, IBRs, Grid-Forming Inverters.",
-    icon: Cpu
-  },
-  {
-    name: "Sustainability",
-    description: "Interested in sustainable solutions and green technologies.",
-    icon: Leaf
-  },
-  {
-    name: "Personal Development",
-    description: "Focused on continuous learning and self-improvement.",
-    icon: UserCheck
-  },
-  {
-    name: "Fitness",
-    description: "Maintaining an active lifestyle through regular exercise.",
-    icon: HeartPulse
-  },
-  {
-    name: "Entrepreneurship",
-    description: "Exploring innovative business ideas and ventures.",
-    icon: Briefcase
-  },
-  {
-    name: "Financial Literacy",
-    description: "Keen on understanding and managing personal finances.",
-    icon: DollarSign
-  },
-  {
-    name: "Outdoor Exploration",
-    description: "Enjoying nature and discovering new places.",
-    icon: Mountain
-  },
-  {
-    name: "Professional Networking",
-    description: "Building connections and engaging with professionals in various fields.",
-    icon: NetworkingIcon
-  }
+interface Hobby {
+  name: string;
+  icon: React.ElementType;
+}
+
+const hobbiesData: Hobby[] = [
+  { name: "Owning and managing a YouTube channel with 38K+ subscribers", icon: Youtube },
+  { name: "Exploring emerging technologies (Agentic AI, LLMs, Blockchain, Smart Grids, IBRs, Grid-Forming Inverters)", icon: Lightbulb },
+  { name: "Focusing on sustainability and green technologies", icon: Leaf },
+  { name: "Engaging in personal development and continuous learning", icon: UserCheck },
+  { name: "Maintaining an active lifestyle through fitness", icon: HeartPulse },
+  { name: "Exploring innovative business ideas and entrepreneurship", icon: Briefcase },
+  { name: "Enhancing financial literacy", icon: DollarSign },
+  { name: "Enjoying outdoor exploration and discovering new places", icon: Mountain },
+  { name: "Building connections through professional networking", icon: NetworkingIcon }
 ];
 
 export default function HobbiesSection() {
   return (
     <Section id="hobbies" title="Hobbies & Interests" subtitle="What I Do Outside of Engineering">
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-        {hobbiesData.map((hobby, index) => (
-          <Card 
-            key={hobby.name} 
-            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 text-center flex flex-col animate-fade-in"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <CardHeader className="items-center p-6 pb-3">
-              <div className="p-4 bg-primary/10 rounded-full inline-block mb-3">
-                <hobby.icon className="h-10 w-10 text-primary" />
-              </div>
-              <CardTitle className="text-xl font-bold font-headline text-card-foreground">{hobby.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6 pt-0 flex-grow">
-              <p className="text-muted-foreground text-sm font-body">{hobby.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <Card className="bg-white rounded-xl shadow-lg">
+        <CardContent className="p-6 md:p-8">
+          <ul className="space-y-4">
+            {hobbiesData.map((hobby, index) => (
+              <li 
+                key={index} 
+                className="flex items-start animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <hobby.icon className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                <span className="text-foreground/90 font-body">{hobby.name}</span>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
     </Section>
   );
 }
