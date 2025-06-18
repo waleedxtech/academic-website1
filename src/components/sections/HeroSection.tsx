@@ -38,22 +38,22 @@ export default function HeroSection() {
               </div>
               <div className="flex gap-2">
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
-                  <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of Waleed Abdullah">
                     <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
-                  <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of Waleed Abdullah">
                     <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
-                  <Link href="https://scholar.google.com/citations?user=YOUR_USER_ID" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                  <Link href="https://scholar.google.com/citations?user=Ald38KsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile of Waleed Abdullah">
                     <GraduationCap className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
-                  <Link href="https://maps.google.com/?q=YourCity,YourCountry" target="_blank" rel="noopener noreferrer" aria-label="Location">
+                  <Link href="https://maps.google.com/?q=YourCity,YourCountry" target="_blank" rel="noopener noreferrer" aria-label="Location of Waleed Abdullah">
                     <MapPin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>

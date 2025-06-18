@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Zap, Mail, Linkedin, Github, GraduationCap, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, GraduationCap, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const contactMethods = [
@@ -28,14 +28,14 @@ const contactMethods = [
     name: 'Scholar',
     icon: GraduationCap,
     value: 'Google Scholar',
-    href: 'https://scholar.google.com/citations?user=YOUR_USER_ID', // Placeholder
+    href: 'https://scholar.google.com/citations?user=Ald38KsAAAAJ', 
     ariaLabel: 'View Waleed Abdullah\'s Google Scholar Profile',
   },
   {
     name: 'Location',
     icon: MapPin,
-    value: 'Your City, Country', // Placeholder
-    href: 'https://maps.google.com/?q=YourCity,YourCountry', // Placeholder
+    value: 'Your City, Country', 
+    href: 'https://maps.google.com/?q=YourCity,YourCountry', 
     ariaLabel: 'View Waleed Abdullah\'s Location',
   },
 ];
@@ -69,8 +69,6 @@ export default function Footer() {
         
         <div className="w-full border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
-            {/* The Zap icon and "ElectronFlow" name are removed based on previous request for Navbar */}
-            {/* If you want branding here, we can add your name or another logo */}
              <span className="font-semibold font-headline text-primary-foreground">Waleed Abdullah</span>
           </div>
           <p className="text-sm text-primary-foreground/80 font-body">
