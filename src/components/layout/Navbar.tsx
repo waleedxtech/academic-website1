@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -7,14 +8,10 @@ import { Menu, X } from 'lucide-react';
 const navItems = [
   { href: '/#about', label: 'About' },
   { href: '/#skills', label: 'Skills' },
-  { href: '/#education', label: 'Education' },
-  { href: '/#coursework', label: 'Coursework' },
   { href: '/#research', label: 'Research' },
   { href: '/#publications', label: 'Publications' },
   { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
-  { href: '/#awards', label: 'Awards' },
-  { href: '/#hobbies', label: 'Hobbies' },
 ];
 
 export default function Navbar() {
