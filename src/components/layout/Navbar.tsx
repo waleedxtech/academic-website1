@@ -7,10 +7,11 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/#about', label: 'About' },
   { href: '/#skills', label: 'Skills' },
+  { href: '/#experience', label: 'Research' },
+  { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
-  { href: '/#blog', label: 'Blog' },
   { href: '/projects', label: 'All Projects' },
-  { href: '/blog', label: 'All Posts' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {

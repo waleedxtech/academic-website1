@@ -1,4 +1,4 @@
-import type { Project, BlogPost } from '@/types';
+import type { Project } from '@/types';
 
 export const projects: Project[] = [
   {
@@ -36,67 +36,6 @@ export const projects: Project[] = [
   },
 ];
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: 'understanding-op-amps',
-    title: 'Understanding Operational Amplifiers',
-    date: '2023-10-26T10:00:00Z',
-    summary: 'A deep dive into the fundamentals of operational amplifiers, their ideal characteristics, and common applications in circuit design.',
-    content: `
-      <p>Operational amplifiers (op-amps) are fundamental building blocks in analog electronics. This post explores their core principles.</p>
-      <h3 class="font-headline text-xl mt-4 mb-2">Ideal Op-Amp Characteristics</h3>
-      <ul>
-        <li>Infinite open-loop gain</li>
-        <li>Infinite input impedance</li>
-        <li>Zero output impedance</li>
-        <li>Infinite bandwidth</li>
-        <li>Zero offset voltage</li>
-      </ul>
-      <p class="mt-2">While real op-amps deviate from these ideals, they provide a good starting point for analysis and design.</p>
-      <h3 class="font-headline text-xl mt-4 mb-2">Common Applications</h3>
-      <p>Op-amps are used in a vast array of applications, including:</p>
-      <ul>
-        <li>Amplifiers (inverting, non-inverting)</li>
-        <li>Filters (low-pass, high-pass, band-pass)</li>
-        <li>Comparators</li>
-        <li>Integrators and Differentiators</li>
-        <li>Voltage followers</li>
-      </ul>
-      <p class="mt-2">Understanding these basic configurations is key to leveraging the power of op-amps in your designs.</p>
-    `,
-    imageUrl: 'https://placehold.co/800x450.png',
-    imageHint: 'circuit diagram',
-    tags: ['Analog Electronics', 'Op-Amps', 'Circuit Design'],
-  },
-  {
-    slug: 'introduction-to-microcontrollers',
-    title: 'An Introduction to Microcontrollers',
-    date: '2023-11-15T14:30:00Z',
-    summary: 'Exploring the world of microcontrollers: what they are, how they work, and their ubiquitous role in modern electronics.',
-    content: `
-      <p>Microcontrollers (MCUs) are small computers on a single integrated circuit. They contain a processor core, memory, and programmable input/output peripherals.</p>
-      <h3 class="font-headline text-xl mt-4 mb-2">Key Components of an MCU</h3>
-      <ul>
-        <li>CPU (Central Processing Unit)</li>
-        <li>Memory (RAM, ROM, Flash)</li>
-        <li>I/O Ports (GPIOs)</li>
-        <li>Timers and Counters</li>
-        <li>Communication Interfaces (UART, SPI, I2C)</li>
-        <li>Analog-to-Digital Converters (ADCs)</li>
-      </ul>
-      <p class="mt-2">MCUs are programmed to perform specific tasks, making them ideal for embedded systems. Popular families include AVR (Arduino), PIC, ARM Cortex-M (STM32, ESP32), and more.</p>
-      <p class="mt-2">Their low cost, versatility, and low power consumption have led to their adoption in countless devices, from home appliances to industrial control systems.</p>
-    `,
-    imageUrl: 'https://placehold.co/800x450.png',
-    imageHint: 'microcontroller chip',
-    tags: ['Embedded Systems', 'Microcontrollers', 'Electronics'],
-  },
-];
-
 export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find(p => p.slug === slug);
-}
-
-export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
-  return blogPosts.find(b => b.slug === slug);
 }

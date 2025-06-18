@@ -10,14 +10,3 @@ export interface Project {
   repoUrl?: string;
   liveUrl?: string;
 }
-
-export interface BlogPost {
-  slug: string;
-  title: string;
-  date: string; // ISO string format
-  summary: string;
-  content: string; // Markdown or HTML content
-  imageUrl?: string;
-  imageHint?: string;
-  tags?: string[];
-}
