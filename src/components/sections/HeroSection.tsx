@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, GraduationCap, MapPin } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -30,10 +30,12 @@ export default function HeroSection() {
               A Gold Medalist Electrical Engineer with a strong academic background, complemented by professional and research experience. Highly motivated and driven by curiosity, I bring a passion for solving complex problems, along with energy, enthusiasm, innovative thinking, and a mindset of continuous improvement.
             </p>
             <div className="flex flex-col items-center md:items-start gap-3 pt-4">
-              <Link href="mailto:waleed.abdullah910@gmail.com" aria-label="Email waleed.abdullah910@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
-                <Mail className="h-5 w-5 text-primary group-hover:text-primary/90 transition-colors" />
-                <span className="font-body">waleed.abdullah910@gmail.com</span>
-              </Link>
+              <div className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-primary" />
+                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
+                  waleed.abdullah910@gmail.com
+                </a>
+              </div>
               <div className="flex gap-2">
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
                   <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -43,6 +45,16 @@ export default function HeroSection() {
                 <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
                   <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
+                  <Link href="https://scholar.google.com/citations?user=YOUR_USER_ID" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                    <GraduationCap className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
+                  <Link href="https://maps.google.com/?q=YourCity,YourCountry" target="_blank" rel="noopener noreferrer" aria-label="Location">
+                    <MapPin className="h-5 w-5 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
               </div>

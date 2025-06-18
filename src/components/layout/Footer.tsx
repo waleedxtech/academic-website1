@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Zap, Mail, Linkedin, Github } from 'lucide-react';
+import { Zap, Mail, Linkedin, Github, GraduationCap, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const contactMethods = [
@@ -23,6 +23,20 @@ const contactMethods = [
     value: 'github.com/waleedx1',
     href: 'https://github.com/waleedx1',
     ariaLabel: 'View Waleed Abdullah\'s GitHub Profile',
+  },
+  {
+    name: 'Scholar',
+    icon: GraduationCap,
+    value: 'Google Scholar',
+    href: 'https://scholar.google.com/citations?user=YOUR_USER_ID', // Placeholder
+    ariaLabel: 'View Waleed Abdullah\'s Google Scholar Profile',
+  },
+  {
+    name: 'Location',
+    icon: MapPin,
+    value: 'Your City, Country', // Placeholder
+    href: 'https://maps.google.com/?q=YourCity,YourCountry', // Placeholder
+    ariaLabel: 'View Waleed Abdullah\'s Location',
   },
 ];
 
@@ -55,11 +69,12 @@ export default function Footer() {
         
         <div className="w-full border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
-            <Zap className="h-5 w-5 text-primary-foreground" />
-            <span className="font-semibold font-headline text-primary-foreground">ElectronFlow</span>
+            {/* The Zap icon and "ElectronFlow" name are removed based on previous request for Navbar */}
+            {/* If you want branding here, we can add your name or another logo */}
+             <span className="font-semibold font-headline text-primary-foreground">Waleed Abdullah</span>
           </div>
           <p className="text-sm text-primary-foreground/80 font-body">
-            &copy; {new Date().getFullYear()} Waleed Abdullah (ElectronFlow). All rights reserved.
+            &copy; {new Date().getFullYear()} Waleed Abdullah. All rights reserved.
           </p>
         </div>
       </div>
