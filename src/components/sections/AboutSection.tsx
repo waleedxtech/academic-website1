@@ -5,26 +5,26 @@ const highlightData = [
   {
     value: "1st",
     label: "Class Rank",
-    bgColor: "bg-blue-100 dark:bg-blue-800/30",
-    textColor: "text-blue-600 dark:text-blue-400",
+    bgColor: "bg-gradient-to-br from-sky-200 to-sky-400 dark:from-sky-700 dark:to-sky-900",
+    textColor: "text-sky-700 dark:text-sky-300",
   },
   {
     value: "3.91",
     label: "GPA/4.00",
-    bgColor: "bg-green-100 dark:bg-green-800/30",
-    textColor: "text-green-600 dark:text-green-400",
+    bgColor: "bg-gradient-to-br from-emerald-200 to-emerald-400 dark:from-emerald-700 dark:to-emerald-900",
+    textColor: "text-emerald-700 dark:text-emerald-300",
   },
   {
     value: "38K+",
     label: "YouTube Subscribers",
-    bgColor: "bg-purple-100 dark:bg-purple-800/30",
-    textColor: "text-purple-600 dark:text-purple-400",
+    bgColor: "bg-gradient-to-br from-violet-200 to-violet-400 dark:from-violet-700 dark:to-violet-900",
+    textColor: "text-violet-700 dark:text-violet-300",
   },
   {
     value: "2",
     label: "Publications",
-    bgColor: "bg-orange-100 dark:bg-orange-800/30",
-    textColor: "text-orange-600 dark:text-orange-400",
+    bgColor: "bg-gradient-to-br from-amber-200 to-amber-400 dark:from-amber-700 dark:to-amber-900",
+    textColor: "text-amber-700 dark:text-amber-300",
   },
 ];
 
