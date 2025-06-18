@@ -18,7 +18,11 @@ export default function ProjectsPage() {
     <Section title="All Projects" subtitle="A Comprehensive Showcase of My Work" className={`py-16 md:py-20 ${gradientBackground}`}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <Button asChild variant="outline" className="group rounded-full hover:bg-accent dark:hover:bg-accent">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="group rounded-full text-foreground hover:bg-muted hover:text-muted-foreground focus-visible:ring-primary/70"
+          >
             <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
               Back to Home

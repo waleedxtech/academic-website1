@@ -31,7 +31,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
             data-ai-hint={project.imageHint || "technology project"}
             layout="fill"
             objectFit="cover"
-            className="transition-transform duration-300 group-hover:scale-105" // Retain image scale on hover for visual feedback within card
+            className="transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       </CardHeader>
@@ -46,7 +46,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
             {project.technologies.map((tech) => (
               <Badge 
                 key={tech} 
-                className="bg-blue-100/70 dark:bg-sky-900/40 text-primary dark:text-sky-300 px-3 py-1 text-xs rounded-full font-medium border-transparent hover:bg-blue-200/70 dark:hover:bg-sky-800/60 transition-colors"
+                className="bg-blue-100/70 dark:bg-sky-900/40 text-primary dark:text-sky-300 px-3 py-1.5 text-xs rounded-full font-medium border-transparent hover:bg-blue-200/70 dark:hover:bg-sky-800/60 transition-colors"
               >
                 {tech}
               </Badge>
@@ -55,7 +55,10 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between gap-3">
-        <Button asChild className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 text-sm rounded-full shadow-md hover:shadow-lg transition-all duration-300 group">
+        <Button 
+          asChild 
+          className="w-full sm:w-auto bg-gray-100 text-gray-700 border border-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600 px-6 py-2.5 text-sm rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
+        >
           <Link href={`/projects/${project.slug}`}>
             Read More <ArrowRight className="ml-1.5 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
           </Link>
