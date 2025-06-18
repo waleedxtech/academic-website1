@@ -5,16 +5,15 @@ import { Menu, Zap } from 'lucide-react';
 
 const navItems = [
   { href: '/#about', label: 'About' },
-  { href: '/#skills', label: 'Skills' },
-  { href: '/#experience', label: 'Research' }, // Assuming Research points to Experience section
-  { href: '/#experience', label: 'Experience' }, // Actual Experience section
+  { href: '/#experience', label: 'Research' },
+  { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
   { href: '/#contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
       <div className="container flex h-16 max-w-6xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Zap className="h-6 w-6 text-brand-blue" />
@@ -25,7 +24,7 @@ export default function Navbar() {
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
           {navItems.map((item) => (
             <Link
-              key={item.label + item.href} // Ensure unique keys if labels/hrefs can repeat (e.g. Research and Experience both to #experience)
+              key={item.label + item.href}
               href={item.href}
               className="transition-colors hover:text-primary text-muted-foreground font-body"
             >
