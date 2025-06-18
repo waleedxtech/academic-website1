@@ -48,11 +48,11 @@ export default function Footer() {
   const socialLinks = contactMethods.filter(m => m.name !== 'Email' && m.name !== 'Location');
 
   return (
-    <footer className="bg-gradient-to-tr from-primary to-accent text-primary-foreground py-12 md:py-16">
+    <footer className="bg-gradient-to-tr from-primary to-accent text-white py-12 md:py-16">
       <div className="container max-w-6xl mx-auto flex flex-col items-center space-y-8">
         <div className="text-center">
           <h3 className="text-3xl font-bold font-headline mb-2 text-white">Let's connect</h3>
-          <p className="text-primary-foreground/80 font-body">
+          <p className="font-body text-white">
             Feel free to reach out for collaborations or inquiries.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function Footer() {
                 key={method.name}
                 asChild={!!method.href}
                 variant="outline"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:border-primary-foreground/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105 text-sm"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-white/30 hover:border-white/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105 text-sm"
                 aria-label={method.ariaLabel}
               >
                 {method.href ? (
@@ -101,11 +101,11 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="w-full border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+        <div className="w-full border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
-             <span className="font-semibold font-headline text-primary-foreground">Waleed Abdullah</span>
+             <span className="font-semibold font-headline text-white">Waleed Abdullah</span>
           </div>
-          <p className="text-sm text-primary-foreground/80 font-body">
+          <p className="text-sm text-white font-body">
             &copy; {new Date().getFullYear()} Waleed Abdullah. All rights reserved.
           </p>
         </div>
