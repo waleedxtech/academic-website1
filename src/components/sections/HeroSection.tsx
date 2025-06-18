@@ -8,8 +8,8 @@ export default function HeroSection() {
   return (
     <section className="relative bg-background py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-10 items-center"> {/* Changed md:gap-16 to md:gap-10 */}
-          <div className="flex justify-center md:justify-start animate-fade-in order-1 md:order-none">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-10 items-center">
+          <div className="flex justify-center md:justify-end animate-fade-in order-1 md:order-none">
             <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"

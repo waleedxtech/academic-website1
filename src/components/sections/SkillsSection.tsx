@@ -49,7 +49,7 @@ export default function SkillsSection() {
             className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className="h-2 bg-gradient-to-tr from-primary to-accent"></div>
+            <div className="h-2 bg-gradient-to-tr from-sky-100 to-purple-100 dark:from-sky-800 dark:to-purple-800"></div>
             <CardHeader className="items-center text-center p-6">
               <skillCategory.icon className="h-10 w-10 text-primary mb-3" />
               <CardTitle className="text-xl font-bold font-headline text-card-foreground">{skillCategory.category}</CardTitle>
@@ -60,7 +60,7 @@ export default function SkillsSection() {
                   <Badge 
                     key={skill} 
                     variant="outline" 
-                    className="border-black text-black bg-transparent px-3 py-1 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                    className="border-black text-black bg-transparent px-3 py-1 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
                   >
                     {skill}
                   </Badge>
