@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Zap } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const navItems = [
   { href: '/#about', label: 'About' },
@@ -15,12 +15,6 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
       <div className="container flex h-16 max-w-6xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Zap className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline sm:inline-block text-xl text-foreground">
-            ElectronFlow
-          </span>
-        </Link>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
           {navItems.map((item) => (
             <Link
@@ -32,7 +26,7 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden">
+        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden"> {/* Spacer for mobile to push menu to right */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -41,15 +35,7 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-6">
-              <div className="mt-8 mb-4">
-                <Link href="/" className="flex items-center space-x-2">
-                  <Zap className="h-6 w-6 text-primary" />
-                  <span className="font-bold font-headline text-xl text-foreground">
-                    ElectronFlow
-                  </span>
-                </Link>
-              </div>
-              <nav className="flex flex-col space-y-3">
+              <nav className="flex flex-col space-y-3 mt-8">
                 {navItems.map((item) => (
                   <SheetTrigger asChild key={item.label + item.href + "-mobile"}>
                     <Link
@@ -63,6 +49,9 @@ export default function Navbar() {
               </nav>
             </SheetContent>
           </Sheet>
+        </div>
+         <div className="hidden md:flex flex-1 items-center justify-end space-x-4"> {/* Spacer for desktop if nav is not taking full width */}
+          {/* Add any right-aligned desktop items here if needed in the future */}
         </div>
       </div>
     </header>
