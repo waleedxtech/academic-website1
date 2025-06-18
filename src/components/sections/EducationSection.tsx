@@ -47,7 +47,7 @@ const trainingData = [
 
 export default function EducationSection() {
   return (
-    <Section id="education" title="Education & Certifications" subtitle="My Academic Background and Professional Development">
+    <Section id="education" title="Education" subtitle="">
       <div className="space-y-12">
         {educationData.map((edu, index) => (
           <Card 
