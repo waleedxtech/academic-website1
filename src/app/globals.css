@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +16,7 @@
     --popover: 0 0% 100%;                   /* white */
     --popover-foreground: 220 25% 20%;      /* Darker, cooler gray */
 
-    --primary: 190 85% 48%;            /* Vibrant Cyan/Teal */
+    --primary: 217 91% 60%;            /* Vibrant Blue */
     --primary-foreground: 210 40% 98%;      /* White (for text on primary) */
 
     --secondary: 205 50% 92%;            /* Softer, lighter blue-gray */
@@ -32,25 +33,25 @@
 
     --border: 210 30% 88%;              /* Lighter border */
     --input: 210 30% 92%;               /* Input background - slightly off-white */
-    --ring: 190 85% 55%;                /* Lighter primary for focus rings */
+    --ring: 217 91% 65%;                /* Lighter primary (blue) for focus rings */
 
     --radius: 0.5rem;
 
-    --chart-1: 190 70% 50%; /* Teal variant */
+    --chart-1: 217 70% 60%; /* Blue variant */
     --chart-2: 250 70% 65%; /* Purple variant */
-    --chart-3: 220 60% 60%; /* Blue variant */
+    --chart-3: 190 60% 60%; /* Cyan/Teal variant (can be adjusted if needed) */
     --chart-4: 43 74% 66%; /* Original orange - can adjust if needed */
     --chart-5: 27 87% 67%; /* Original coral - can adjust if needed */
 
     /* Sidebar colors - adjust if sidebar is used extensively with new theme */
     --sidebar-background: 210 40% 97%; /* Slightly off main background */
     --sidebar-foreground: 220 25% 25%;
-    --sidebar-primary: 190 80% 50%;
+    --sidebar-primary: 217 85% 62%; /* Blue for sidebar primary */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 205 40% 90%;
-    --sidebar-accent-foreground: 190 80% 40%;
+    --sidebar-accent-foreground: 217 80% 45%; /* Darker blue for sidebar accent fg */
     --sidebar-border: 210 30% 85%;
-    --sidebar-ring: 190 85% 55%;
+    --sidebar-ring: 217 91% 65%;
   }
 
   .dark {
@@ -63,8 +64,8 @@
     --popover: 220 20% 8%;            /* Darker for popovers */
     --popover-foreground: 210 30% 90%;
 
-    --primary: 190 75% 55%;             /* Vibrant Cyan/Teal - slightly lighter for dark */
-    --primary-foreground: 220 20% 10%; /* Dark text on dark primary */
+    --primary: 217 85% 65%;             /* Vibrant Blue - slightly lighter for dark */
+    --primary-foreground: 220 15% 15%; /* Darker text on dark primary */
 
     --secondary: 220 15% 20%;          /* Darker secondary */
     --secondary-foreground: 210 30% 80%;
@@ -80,17 +81,17 @@
 
     --border: 220 15% 25%;              /* Dark border */
     --input: 220 15% 20%;               /* Dark input */
-    --ring: 190 75% 60%;          /* Ring for dark */
+    --ring: 217 85% 70%;          /* Ring for dark */
     
     /* Sidebar colors for dark theme */
     --sidebar-background: 220 20% 12%;
     --sidebar-foreground: 210 30% 88%;
-    --sidebar-primary: 190 70% 58%;
+    --sidebar-primary: 217 80% 68%;
     --sidebar-primary-foreground: 220 15% 10%;
     --sidebar-accent: 220 15% 22%;
-    --sidebar-accent-foreground: 190 70% 65%;
+    --sidebar-accent-foreground: 217 75% 70%;
     --sidebar-border: 220 15% 28%;
-    --sidebar-ring: 190 75% 60%;
+    --sidebar-ring: 217 85% 70%;
   }
 }
 
