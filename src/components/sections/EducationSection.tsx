@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { GraduationCap, CalendarDays, ExternalLink, BookOpen } from 'lucide-react';
@@ -94,31 +95,29 @@ export default function EducationSection() {
 
       <div className="mt-16">
         <h3 className="text-3xl font-bold tracking-tight font-headline text-center mb-12 text-foreground">Trainings & Certifications</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ul className="max-w-2xl mx-auto space-y-6">
           {trainingData.map((training, index) => (
-            <Card 
+            <li 
               key={index} 
-              className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col animate-fade-in" 
+              className="animate-fade-in" 
               style={{ animationDelay: `${(educationData.length + index) * 0.1}s` }}
             >
-              <CardHeader className="flex flex-row items-start bg-muted/50 p-6 space-x-3">
-                <div className="p-2.5 bg-accent/10 rounded-full">
-                  <training.icon className="h-6 w-6 text-accent-foreground" />
+              <div className="flex items-start p-4 border rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 bg-card hover:border-primary group hover:scale-105 cursor-default">
+                <div className="flex-shrink-0 p-3 bg-primary/10 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
+                  <training.icon className="h-6 w-6 text-primary group-hover:text-primary/90 transition-colors" />
                 </div>
-                <div>
-                  <CardTitle className="text-lg font-bold font-headline leading-tight text-card-foreground">{training.title}</CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground">{training.institution}</CardDescription>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-lg font-headline text-card-foreground group-hover:text-primary transition-colors">{training.title}</h4>
+                  <p className="text-sm text-muted-foreground">{training.institution}</p>
+                  <div className="mt-1 flex items-center text-xs text-muted-foreground">
+                    <CalendarDays className="h-4 w-4 mr-1.5 text-primary/70" />
+                    <span>{training.date}</span>
+                  </div>
                 </div>
-              </CardHeader>
-              <CardFooter className="p-6 pt-2 mt-auto">
-                <div className="flex items-center text-xs text-muted-foreground">
-                  <CalendarDays className="h-4 w-4 mr-1.5 text-primary/70" />
-                  <span className="font-body">{training.date}</span>
-                </div>
-              </CardFooter>
-            </Card>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </Section>
   );
