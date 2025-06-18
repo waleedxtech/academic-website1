@@ -1,6 +1,6 @@
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, Trophy, Star, Users } from 'lucide-react'; // Users icon is available
+import { Award, Trophy, Star, Users as UsersIcon } from 'lucide-react'; 
 
 const awardsData = [
   {
@@ -21,17 +21,17 @@ const awardsData = [
   {
     title: "Consistent Top Performer",
     description: "Ranked first in the batch in every semester of B.Sc. Electrical Engineering.",
-    icon: Award // Using Award again, consider a different one if available/desired like Zap or ShieldCheck
+    icon: Award 
   },
   {
     title: "Academic Excellence Scholarship",
     description: "Recipient for every semester at the University of Lahore.",
-    icon: Star // Using Star again
+    icon: Star
   },
   {
     title: "General Secretary - ECES",
     description: "Appointed General Secretary of the Electrical and Control Engineering Society, UOL.",
-    icon: Users 
+    icon: UsersIcon 
   }
 ];
 
@@ -42,14 +42,14 @@ export default function AwardsSection() {
         {awardsData.map((award, index) => (
           <Card 
             key={index} 
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col h-full animate-fade-in"
+            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col h-full animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <CardHeader className="items-center text-center p-6 pb-4">
-              <div className="p-4 bg-brand-purple/10 rounded-full inline-block mb-3">
-                <award.icon className="h-10 w-10 text-brand-purple" />
+              <div className="p-4 bg-accent/10 rounded-full inline-block mb-3">
+                <award.icon className="h-10 w-10 text-accent-foreground" />
               </div>
-              <CardTitle className="text-xl font-bold font-headline text-foreground leading-tight">{award.title}</CardTitle>
+              <CardTitle className="text-xl font-bold font-headline text-card-foreground leading-tight">{award.title}</CardTitle>
             </CardHeader>
             <CardContent className="text-center p-6 pt-0 flex-grow">
               <p className="text-muted-foreground text-sm font-body">{award.description}</p>

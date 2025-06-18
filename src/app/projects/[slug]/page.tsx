@@ -50,7 +50,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     <Section title={project.title} className="py-16 md:py-20" subtitle={project.shortDescription} showDivider={false}>
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <Button asChild variant="outline" className="group rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+          <Button asChild variant="outline" className="group rounded-full hover:bg-accent dark:hover:bg-accent">
             <Link href="/projects">
               <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
               Back to All Projects
@@ -82,7 +82,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <h4 className="text-lg font-bold font-headline mb-3 text-foreground">Technologies Used:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary" className="bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20 px-3 py-1 text-sm">
+              <Badge key={tech} variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-3 py-1 text-sm">
                 {tech}
               </Badge>
             ))}
@@ -91,7 +91,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
         <div className="flex flex-col sm:flex-row gap-4">
           {project.repoUrl && (
-            <Button asChild className="bg-brand-blue hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg group transition-all duration-300 hover:scale-105">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full shadow-lg group transition-all duration-300 hover:scale-105">
               <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 View Repository
@@ -99,7 +99,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </Button>
           )}
           {project.liveUrl && (
-            <Button asChild variant="outline" className="rounded-full group hover:bg-slate-100 dark:hover:bg-slate-800 px-6 py-3">
+            <Button asChild variant="outline" className="rounded-full group hover:bg-accent dark:hover:bg-accent px-6 py-3">
               <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-5 w-5" />
                 Live Demo

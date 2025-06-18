@@ -1,14 +1,14 @@
 import Section from '@/components/ui/Section';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CircuitBoard, Cpu, Code, Users, TrendingUp } from 'lucide-react'; // Replaced Lightbulb, Settings, Activity
+import { CircuitBoard, Cpu, Code, Users, TrendingUp } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface SkillCategory {
   category: string;
   icon: LucideIcon;
   skills: string[];
-  gradient: string; // For Tailwind gradient classes
+  gradient: string; 
 }
 
 const skillsData: SkillCategory[] = [
@@ -16,7 +16,7 @@ const skillsData: SkillCategory[] = [
     category: "Software",
     icon: Code,
     skills: ["MATLAB", "Simulink", "ETAP", "DigSilent PowerFactory", "ANSYS Maxwell", "CST Studio", "AutoCAD", "Multisim", "Proteus"],
-    gradient: "from-blue-400 to-purple-500"
+    gradient: "from-blue-400 to-purple-500" 
   },
   {
     category: "Technical Skills",
@@ -39,8 +39,8 @@ const skillsData: SkillCategory[] = [
   {
     category: "Actively Enhancing",
     icon: TrendingUp,
-    skills: ["Python", "Machine Learning", "Optimization", "PSCAD", "Power System Studies (PSS/E)"], // Assuming PSS/E from context
-    gradient: "from-red-400 to-orange-500" // Using one of the specified gradients
+    skills: ["Python", "Machine Learning", "Optimization", "PSCAD", "Power System Studies (PSS/E)"],
+    gradient: "from-red-400 to-orange-500"
   }
 ];
 
@@ -51,18 +51,18 @@ export default function SkillsSection() {
         {skillsData.map((skillCategory, index) => (
           <Card 
             key={skillCategory.category} 
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className={`h-2 bg-gradient-to-r ${skillCategory.gradient}`}></div> {/* Color bar */}
+            <div className={`h-2 bg-gradient-to-r ${skillCategory.gradient}`}></div>
             <CardHeader className="items-center text-center p-6">
-              <skillCategory.icon className="h-10 w-10 text-brand-blue mb-3" />
-              <CardTitle className="text-xl font-bold font-headline text-foreground">{skillCategory.category}</CardTitle>
+              <skillCategory.icon className="h-10 w-10 text-primary mb-3" />
+              <CardTitle className="text-xl font-bold font-headline text-card-foreground">{skillCategory.category}</CardTitle>
             </CardHeader>
             <CardContent className="text-center p-6 pt-0">
               <div className="flex flex-wrap justify-center gap-2">
                 {skillCategory.skills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-blue-600/10 text-blue-700 hover:bg-blue-600/20 px-3 py-1 text-sm">
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">
                     {skill}
                   </Badge>
                 ))}

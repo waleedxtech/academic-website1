@@ -1,6 +1,5 @@
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
 
 const courseworkData = [
   "Power Distribution and Utilization",
@@ -11,15 +10,14 @@ const courseworkData = [
   "Control Systems",
   "Control of DC and AC Drives",
   "Embedded Systems"
-  // "etc." removed as it's vague
 ];
 
 export default function CourseworkSection() {
   return (
     <Section id="coursework" title="Relevant Coursework" subtitle="Key Academic Areas of Study">
-      <Card className="bg-white rounded-xl shadow-lg overflow-hidden">
+      <Card className="bg-card rounded-xl shadow-lg overflow-hidden">
         <CardHeader className="p-6">
-          <CardTitle className="text-xl font-bold font-headline text-center text-foreground">Core Electrical Engineering Topics</CardTitle>
+          <CardTitle className="text-xl font-bold font-headline text-center text-card-foreground">Core Electrical Engineering Topics</CardTitle>
         </CardHeader>
         <CardContent className="p-6">
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4">
@@ -29,8 +27,8 @@ export default function CourseworkSection() {
                 className="flex items-start animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <span className="flex-shrink-0 w-2 h-2 bg-brand-blue-400 rounded-full mr-3 mt-[0.45em]"></span>
-                <span className="text-foreground/90 font-body">{course}</span>
+                <span className="flex-shrink-0 w-2 h-2 bg-muted rounded-full mr-3 mt-[0.45em]"></span>
+                <span className="text-card-foreground/90 font-body">{course}</span>
               </li>
             ))}
           </ul>

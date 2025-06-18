@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const featuredProjects = projects.slice(0, 3); // Show first 3 projects
+const featuredProjects = projects.slice(0, 3);
 
 export default function ProjectsSection() {
   return (
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       </div>
       {projects.length > 3 && (
         <div className="text-center mt-12 md:mt-16 animate-fade-in" style={{ animationDelay: `${featuredProjects.length * 0.1}s` }}>
-          <Button asChild size="lg" className="bg-brand-blue hover:bg-blue-700 text-white px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 group">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 group">
             <Link href="/projects">
               View All Projects <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>

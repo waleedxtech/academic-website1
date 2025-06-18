@@ -1,6 +1,6 @@
 import Section from '@/components/ui/Section';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Briefcase, FlaskConical, BookText, CalendarDays, ExternalLink } from 'lucide-react'; 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Briefcase, FlaskConical, BookText, CalendarDays, ExternalLink, ArrowRight } from 'lucide-react'; 
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
@@ -14,7 +14,7 @@ interface ExperienceItem {
   description: string | string[];
   link?: string;
   authors?: string;
-  doi?: string; // Added for publications
+  doi?: string;
 }
 
 const experienceData: ExperienceItem[] = [
@@ -51,7 +51,6 @@ const experienceData: ExperienceItem[] = [
     journal: '2022 International Conference on Electrical Engineering and Sustainable Technologies (ICEEST), Lahore, Pakistan, 2022',
     authors: 'W. Abdullah, M. Barkat, M. Ijaz, R. Khan, R. Muzammel and A. Raza',
     description: 'Conference publication detailing the research on the micro butt welding power plant.',
-    // doi: 'DOI_LINK_HERE' // Add actual DOI link if available
   },
   {
     type: 'Publication',
@@ -59,7 +58,6 @@ const experienceData: ExperienceItem[] = [
     journal: '2022 International Conference on Electrical Engineering and Sustainable Technologies (ICEEST), Lahore, Pakistan, 2022',
     authors: 'U. Tahir, W. Abdullah and L. Ali',
     description: 'Conference publication detailing the research on the solid-state DC circuit breaker.',
-    // doi: 'DOI_LINK_HERE' // Add actual DOI link if available
   },
   {
     type: 'Internship',
@@ -80,13 +78,13 @@ const experienceData: ExperienceItem[] = [
 const getIcon = (type: ExperienceItem['type']) => {
   switch (type) {
     case 'Internship':
-      return <Briefcase className="h-8 w-8 text-brand-blue" />;
+      return <Briefcase className="h-8 w-8 text-primary" />;
     case 'Research':
-      return <FlaskConical className="h-8 w-8 text-brand-purple" />;
+      return <FlaskConical className="h-8 w-8 text-primary" />; // Using primary, as new accent is light gray
     case 'Publication':
-      return <BookText className="h-8 w-8 text-brand-blue" />; // Or a different color like purple
+      return <BookText className="h-8 w-8 text-primary" />;
     default:
-      return <Briefcase className="h-8 w-8 text-brand-blue" />;
+      return <Briefcase className="h-8 w-8 text-primary" />;
   }
 };
 
@@ -97,15 +95,15 @@ export default function ExperienceSection() {
         {experienceData.map((item, index) => (
           <Card 
             key={index} 
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
             >
-            <CardHeader className="flex flex-row items-start bg-slate-50 p-6 space-x-4">
+            <CardHeader className="flex flex-row items-start bg-muted/50 p-6 space-x-4">
               <div className="p-3 bg-primary/10 rounded-full">
                 {getIcon(item.type)}
               </div>
               <div>
-                <CardTitle className="text-xl font-bold font-headline text-foreground">{item.title}</CardTitle>
+                <CardTitle className="text-xl font-bold font-headline text-card-foreground">{item.title}</CardTitle>
                 <CardDescription className="text-lg text-muted-foreground">
                   {item.organization || item.journal}
                   {item.type === 'Publication' && item.authors && <span className="block text-sm text-muted-foreground mt-1">Authors: {item.authors}</span>}
@@ -115,7 +113,7 @@ export default function ExperienceSection() {
             <CardContent className="p-6 space-y-3">
               {(item.period || item.date) && (
                 <div className="flex items-center text-muted-foreground font-body">
-                  <CalendarDays className="h-5 w-5 mr-2 text-brand-blue-400" />
+                  <CalendarDays className="h-5 w-5 mr-2 text-primary/70" />
                   <span>{item.period || item.date}</span>
                 </div>
               )}
@@ -123,16 +121,16 @@ export default function ExperienceSection() {
                 <ul className="space-y-2">
                   {item.description.map((descItem, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="flex-shrink-0 w-2 h-2 bg-brand-blue-400 rounded-full mr-3 mt-[0.45em]"></span>
-                      <span className="font-body text-foreground/90 leading-relaxed">{descItem}</span>
+                      <span className="flex-shrink-0 w-2 h-2 bg-muted rounded-full mr-3 mt-[0.45em]"></span>
+                      <span className="font-body text-card-foreground/90 leading-relaxed">{descItem}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="font-body text-foreground/90 leading-relaxed">{item.description}</p>
+                <p className="font-body text-card-foreground/90 leading-relaxed">{item.description}</p>
               )}
               {(item.link || item.doi) && (
-                <Button asChild variant="link" className="text-brand-blue hover:text-brand-purple p-0 h-auto mt-3">
+                <Button asChild variant="link" className="text-primary hover:text-primary/80 p-0 h-auto mt-3">
                   <Link
                     href={item.link || item.doi || '#'}
                     target="_blank"

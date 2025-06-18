@@ -22,20 +22,20 @@ export default function AboutSection() {
           </p>
           
           <div className="grid sm:grid-cols-2 gap-6 mt-8">
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 transition-all duration-300 group hover:scale-105">
+            <div className="bg-card rounded-xl shadow-lg hover:shadow-xl p-6 transition-all duration-300 group hover:scale-105">
               <div className="flex items-start space-x-4">
-                <Brain className="h-10 w-10 text-brand-blue flex-shrink-0 mt-1" />
+                <Brain className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold font-headline text-foreground">Problem Solver</h3>
+                  <h3 className="text-xl font-bold font-headline text-card-foreground">Problem Solver</h3>
                   <p className="text-muted-foreground mt-1">Dedicated to finding elegant solutions to challenging engineering puzzles.</p>
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl p-6 transition-all duration-300 group hover:scale-105">
+            <div className="bg-card rounded-xl shadow-lg hover:shadow-xl p-6 transition-all duration-300 group hover:scale-105">
               <div className="flex items-start space-x-4">
-                <Award className="h-10 w-10 text-brand-blue flex-shrink-0 mt-1" />
+                <Award className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-bold font-headline text-foreground">Continuous Learner</h3>
+                  <h3 className="text-xl font-bold font-headline text-card-foreground">Continuous Learner</h3>
                   <p className="text-muted-foreground mt-1">Always exploring new technologies and embracing a mindset of continuous improvement.</p>
                 </div>
               </div>

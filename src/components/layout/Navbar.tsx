@@ -17,7 +17,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
       <div className="container flex h-16 max-w-6xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Zap className="h-6 w-6 text-brand-blue" />
+          <Zap className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline sm:inline-block text-xl text-foreground">
             ElectronFlow
           </span>
@@ -44,7 +44,7 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-6">
               <div className="mt-8 mb-4">
                 <Link href="/" className="flex items-center space-x-2">
-                  <Zap className="h-6 w-6 text-brand-blue" />
+                  <Zap className="h-6 w-6 text-primary" />
                   <span className="font-bold font-headline text-xl text-foreground">
                     ElectronFlow
                   </span>
@@ -55,7 +55,7 @@ export default function Navbar() {
                   <SheetTrigger asChild key={item.label + item.href + "-mobile"}>
                     <Link
                       href={item.href}
-                      className="transition-colors hover:text-primary text-muted-foreground hover:bg-slate-100 dark:hover:bg-slate-800 text-lg p-3 rounded-md font-body"
+                      className="transition-colors hover:text-primary text-muted-foreground hover:bg-accent dark:hover:bg-accent text-lg p-3 rounded-md font-body"
                     >
                       {item.label}
                     </Link>
