@@ -52,7 +52,7 @@ export default function EducationSection() {
         {educationData.map((edu, index) => (
           <Card 
             key={index} 
-            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in" 
+            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in" 
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <CardHeader className="flex flex-row items-start bg-muted/50 p-6 space-x-4">
@@ -102,7 +102,7 @@ export default function EducationSection() {
               className="animate-fade-in" 
               style={{ animationDelay: `${(educationData.length + index) * 0.1}s` }}
             >
-              <div className="flex items-start p-4 border rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 bg-card hover:border-primary group hover:scale-105 cursor-default">
+              <div className="flex items-start p-4 border rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 hover:border-primary group hover:scale-105 cursor-default">
                 <div className="flex-shrink-0 p-3 bg-primary/10 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <training.icon className="h-6 w-6 text-primary group-hover:text-primary/90 transition-colors" />
                 </div>

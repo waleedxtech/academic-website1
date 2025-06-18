@@ -42,10 +42,10 @@ export default function ResearchSection() {
         {researchData.map((item, index) => (
           <Card 
             key={index} 
-            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
             >
-            <CardHeader className="flex flex-row items-start bg-slate-100 dark:bg-slate-800 p-6 space-x-4">
+            <CardHeader className="flex flex-row items-start bg-slate-100/80 dark:bg-slate-800/80 p-6 space-x-4"> {/* Adjusted opacity of header for better gradient visibility */}
               <div className="p-3 bg-primary/10 rounded-full">
                 <FlaskConical className="h-8 w-8 text-primary" />
               </div>

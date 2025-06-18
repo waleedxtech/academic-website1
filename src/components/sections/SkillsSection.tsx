@@ -46,7 +46,7 @@ export default function SkillsSection() {
         {skillsData.map((skillCategory, index) => (
           <Card 
             key={skillCategory.category} 
-            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="h-2 bg-gradient-to-tr from-sky-100 to-purple-100 dark:from-sky-800 dark:to-purple-800"></div>

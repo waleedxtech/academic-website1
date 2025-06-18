@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,22 +9,22 @@ const contactMethods = [
   {
     name: 'Email',
     icon: Mail,
-    value: 'w.abdullah.ee@gmail.com',
-    href: 'mailto:w.abdullah.ee@gmail.com',
+    value: 'waleedabdullah.ee@gmail.com',
+    href: 'mailto:waleedabdullah.ee@gmail.com',
     ariaLabel: 'Send an Email',
   },
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    value: 'linkedin.com/in/wabdullah-ee',
-    href: 'https://linkedin.com/in/wabdullah-ee',
+    value: 'linkedin.com/in/waleedabdullah',
+    href: 'https://linkedin.com/in/waleedabdullah/',
     ariaLabel: 'View LinkedIn Profile',
   },
   {
     name: 'GitHub',
     icon: Github,
-    value: 'github.com/wahab-abdullah',
-    href: 'https://github.com/wahab-abdullah',
+    value: 'github.com/waleedx1',
+    href: 'https://github.com/waleedx1',
     ariaLabel: 'View GitHub Profile',
   },
 ];
@@ -35,7 +36,7 @@ export default function ContactSection() {
         {contactMethods.map((method, index) => (
           <Card 
             key={method.name} 
-            className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
             >
             <CardHeader className="items-center text-center p-6 pb-2">
