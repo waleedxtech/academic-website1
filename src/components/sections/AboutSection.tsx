@@ -5,26 +5,26 @@ const highlightData = [
   {
     value: "1st",
     label: "Class Rank",
-    bgColor: "bg-gradient-to-br from-sky-100 to-sky-300 dark:from-sky-400 dark:to-sky-600",
-    textColor: "text-sky-700 dark:text-sky-100",
+    bgColor: "bg-gradient-to-br from-sky-50 to-sky-200 dark:from-sky-700 dark:to-sky-800",
+    textColor: "text-sky-600 dark:text-sky-300",
   },
   {
     value: "3.91",
     label: "GPA/4.00",
-    bgColor: "bg-gradient-to-br from-emerald-100 to-emerald-300 dark:from-emerald-400 dark:to-emerald-600",
-    textColor: "text-emerald-700 dark:text-emerald-100",
+    bgColor: "bg-gradient-to-br from-emerald-50 to-emerald-200 dark:from-emerald-700 dark:to-emerald-800",
+    textColor: "text-emerald-600 dark:text-emerald-300",
   },
   {
     value: "38K+",
     label: "YouTube Subscribers",
-    bgColor: "bg-gradient-to-br from-violet-100 to-violet-300 dark:from-violet-400 dark:to-violet-600",
-    textColor: "text-violet-700 dark:text-violet-100",
+    bgColor: "bg-gradient-to-br from-violet-50 to-violet-200 dark:from-violet-700 dark:to-violet-800",
+    textColor: "text-violet-600 dark:text-violet-300",
   },
   {
     value: "2",
     label: "Publications",
-    bgColor: "bg-gradient-to-br from-amber-100 to-amber-300 dark:from-amber-400 dark:to-amber-600",
-    textColor: "text-amber-700 dark:text-amber-100",
+    bgColor: "bg-gradient-to-br from-amber-50 to-amber-200 dark:from-amber-700 dark:to-amber-800",
+    textColor: "text-amber-600 dark:text-amber-300",
   },
 ];
 
