@@ -49,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
                 {item.label}
               </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
               aria-controls="mobile-menu"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle menu"
@@ -80,7 +80,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary transition-colors"
                 onClick={closeMobileMenu}
               >
                 {item.label}
