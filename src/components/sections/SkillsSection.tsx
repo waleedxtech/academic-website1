@@ -19,12 +19,12 @@ const skillsData: SkillCategory[] = [
   {
     category: "Technical Skills",
     icon: CircuitBoard,
-    skills: ["Power System Studies", "System Design", "Finite Element Analysis", "PCB Design and Fabrication", "LaTeX"],
+    skills: ["Power System Studies", "System Design", "Finite Element Analysis", "PCB Design and Fabrication", "Hardware Prototyping"],
   },
   {
     category: "Programming",
     icon: Cpu,
-    skills: ["C++", "MATLAB", "Embedded Systems", "Arduino"],
+    skills: ["Python", "C++", "MATLAB", "Embedded Systems", "Arduino"],
   },
   {
     category: "Soft Skills",
@@ -34,7 +34,7 @@ const skillsData: SkillCategory[] = [
   {
     category: "Actively Enhancing",
     icon: TrendingUp,
-    skills: ["Python", "Machine Learning", "Optimization", "PSCAD", "Power System Studies (PSS/E)"],
+    skills: ["Machine Learning", "Optimization", "PSCAD", "Power System Studies"],
   }
 ];
 
