@@ -17,10 +17,7 @@ export default function LifePhilosophySection({ className }: LifePhilosophySecti
     >
       <div className="max-w-3xl text-center bg-background/80 dark:bg-card/70 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-xl border border-border/30">
         <p className="text-lg md:text-xl leading-relaxed text-foreground/90 font-body">
-          I believe in continuous learning and maintaining a balance between technical expertise and personal interests.
-          My diverse passions not only provide personal fulfillment but also inspire innovative approaches to engineering
-          challenges. Whether I'm creating YouTube content, exploring emerging technologies, or engaging with the
-          professional community, each experience contributes to my growth as both an engineer and an individual.
+          Driven by curiosity and guided by ethics, I strive to innovate with integrity. I believe in uplifting others, fostering sustainable progress, and using service to give back to humanity. Every challenge is an opportunity to grow, not just personally, but collectively. My mission is impact rooted in honesty and purpose.
         </p>
       </div>
     </Section>
