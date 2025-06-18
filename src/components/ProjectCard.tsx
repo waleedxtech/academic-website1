@@ -18,7 +18,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
   return (
     <Card 
       className={cn(
-        "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 flex flex-col h-full",
+        "bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col h-full",
         className
       )}
       style={style}
@@ -31,7 +31,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
             data-ai-hint={project.imageHint || "technology project"}
             layout="fill"
             objectFit="cover"
-            className="transition-transform duration-300 group-hover:scale-105"
+            className="transition-transform duration-300 group-hover:scale-105" // Retain image scale on hover for visual feedback within card
           />
         </div>
       </CardHeader>
@@ -55,7 +55,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between gap-3">
-        <Button asChild className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 text-sm rounded-full shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-105">
+        <Button asChild className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2.5 text-sm rounded-full shadow-md hover:shadow-lg transition-all duration-300 group">
           <Link href={`/projects/${project.slug}`}>
             Read More <ArrowRight className="ml-1.5 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
           </Link>

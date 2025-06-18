@@ -49,7 +49,7 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
         {skillsData.map((skillCategory, index) => (
           <Card 
             key={skillCategory.category} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in flex flex-col"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-fade-in flex flex-col"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="h-2 bg-gradient-to-tr from-sky-100 to-purple-100 dark:from-sky-800 dark:to-purple-800"></div>

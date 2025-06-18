@@ -36,7 +36,7 @@ export default function ContactSection() {
         {contactMethods.map((method, index) => (
           <Card 
             key={method.name} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
             >
             <CardHeader className="items-center text-center p-6 pb-2">
@@ -47,7 +47,7 @@ export default function ContactSection() {
             </CardHeader>
             <CardContent className="text-center p-6 pt-0">
               <p className="text-muted-foreground mb-4 break-words font-body">{method.value}</p>
-              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-sm rounded-full shadow-lg transition-all duration-300 hover:scale-105 group">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 text-sm rounded-full shadow-lg transition-all duration-300 group">
                 <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={method.ariaLabel}>
                   {method.name === 'Email' ? 'Send Email' : `View ${method.name}`}
                 </Link>
@@ -64,4 +64,3 @@ export default function ContactSection() {
     </Section>
   );
 }
-

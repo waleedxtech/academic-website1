@@ -49,7 +49,7 @@ export default function ResearchSection({ className }: ResearchSectionProps) {
         {researchData.map((item, index) => (
           <Card 
             key={index} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 animate-fade-in relative overflow-hidden"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-fade-in relative overflow-hidden"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <FlaskConical className="h-8 w-8 text-primary absolute top-6 right-6" />

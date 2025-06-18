@@ -47,8 +47,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
     notFound();
   }
 
+  const gradientBackground = "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-900 dark:to-sky-950/60";
+
   return (
-    <Section title={project.title} className="py-16 md:py-20" subtitle={project.shortDescription} showDivider={false}>
+    <Section title={project.title} className={`py-16 md:py-20 ${gradientBackground}`} subtitle={project.shortDescription} showDivider={false}>
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Button asChild variant="outline" className="group rounded-full hover:bg-accent dark:hover:bg-accent">
@@ -95,7 +97,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
         <div className="flex flex-col sm:flex-row gap-4">
           {project.repoUrl && (
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full shadow-lg group transition-all duration-300 hover:scale-105">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full shadow-lg group transition-all duration-300">
               <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 View Repository
