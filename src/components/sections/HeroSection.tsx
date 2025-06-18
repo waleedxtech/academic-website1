@@ -8,9 +8,9 @@ export default function HeroSection() {
   return (
     <section className="relative bg-background py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-10 items-center">
-          <div className="flex justify-center md:justify-end animate-fade-in order-1 md:order-none">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl group">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12">
+          <div className="flex-shrink-0 animate-fade-in">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"
                 alt="W. Abdullah - Electrical Engineer"
@@ -22,7 +22,7 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="space-y-6 text-center md:text-left animate-fade-in order-2 md:order-none" style={{ animationDelay: '0.2s' }}>
+          <div className="flex-1 space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
               Waleed <span className="text-primary">Abdullah</span>
             </h1>
