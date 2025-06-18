@@ -11,7 +11,7 @@ export default function HeroSection() {
           <div className="flex justify-center md:justify-start order-first md:order-first animate-fade-in">
             <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl group">
               <Image
-                src="https://placehold.co/400x500.png"
+                src="https://placehold.co/400x400.png"
                 alt="W. Abdullah - Electrical Engineer"
                 data-ai-hint="professional engineer"
                 layout="fill"
@@ -42,20 +42,23 @@ export default function HeroSection() {
                 <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-sm text-muted-foreground font-body">Lahore, Pakistan</span>
               </div>
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
                   <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of Waleed Abdullah">
-                    <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                    <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                    LinkedIn
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
                   <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of Waleed Abdullah">
-                    <Github className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                    <Github className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                    GitHub
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
                   <Link href="https://scholar.google.com/citations?user=Ald38KsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile of Waleed Abdullah">
-                    <GraduationCap className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                    <GraduationCap className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                    Scholar
                   </Link>
                 </Button>
               </div>

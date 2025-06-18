@@ -54,36 +54,31 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center gap-4 w-full">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
             {emailAndLocation.map((method) => (
-              <Button
-                key={method.name}
-                asChild={!!method.href} 
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:border-primary-foreground/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105"
+              <div 
+                key={method.name} 
+                className="flex items-center gap-2 text-primary-foreground/90 font-body text-sm" // Adjusted styling
                 aria-label={method.ariaLabel}
               >
+                <method.icon className="h-5 w-5" />
                 {method.href ? (
-                  <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
-                    <method.icon className="mr-2 h-5 w-5" />
-                    {method.name === 'Email' ? method.value : method.name}
+                  <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="hover:underline">
+                    {method.value}
                   </Link>
                 ) : (
-                  <>
-                    <method.icon className="mr-2 h-5 w-5" />
-                    {method.value}
-                  </>
+                  <span>{method.value}</span>
                 )}
-              </Button>
+              </div>
             ))}
           </div>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
             {socialLinks.map((method) => (
               <Button
                 key={method.name}
                 asChild={!!method.href}
                 variant="outline"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:border-primary-foreground/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-primary-foreground border-primary-foreground/30 hover:border-primary-foreground/50 rounded-full px-6 py-3 group transition-all duration-300 hover:scale-105 text-sm"
                 aria-label={method.ariaLabel}
               >
                 {method.href ? (
@@ -92,7 +87,7 @@ export default function Footer() {
                     {method.name}
                   </Link>
                 ) : (
-                  <> {/* Should not reach here for social links as they all have href */}
+                   <> {/* Should not reach here for social links as they all have href */}
                     <method.icon className="mr-2 h-5 w-5" />
                     {method.value}
                   </>
