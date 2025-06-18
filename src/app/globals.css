@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%; /* Slate-50 (approx for dark mode, will be light in light mode) */
-    --foreground: 222.2 84% 4.9%; /* gray-800 (approx) */
+    --background: 210 40% 98%;             /* slate-50 / #f8fafc */
+    --foreground: 215 28% 17%;             /* gray-800 / #1f2937 */
 
-    --card: 0 0% 100%; /* white */
-    --card-foreground: 222.2 84% 4.9%; /* gray-800 */
+    --card: 0 0% 100%;                      /* white / #ffffff */
+    --card-foreground: 215 28% 17%;         /* gray-800 / #1f2937 for text on cards */
 
-    --popover: 0 0% 100%; /* white */
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;                   /* white */
+    --popover-foreground: 215 28% 17%;      /* gray-800 */
 
-    --primary: 220.3 90.2% 52%; /* blue-600 (#2563eb) */
-    --primary-foreground: 210 40% 98%; /* white (for primary button text) */
+    --primary: 220.3 90.2% 52%;            /* blue-600 / #2563eb */
+    --primary-foreground: 210 40% 98%;      /* white (for text on primary) */
 
-    --secondary: 210 40% 96.1%; /* Default ShadCN secondary - kept for components not explicitly re-themed */
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%;            /* Default ShadCN secondary - light gray */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Default ShadCN secondary text - dark gray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 20% 65.1%; /* gray-600 (#6b7280) for muted text */
+    --muted: 210 40% 96.1%;                 /* Default ShadCN muted - light gray */
+    --muted-foreground: 215.4 16.3% 46.9%;  /* gray-600 / #6b7280 (ShadCN's default for light bg) */
 
-    --accent: 255.1 82.9% 60.8%; /* purple-600 (#7c3aed) */
-    --accent-foreground: 210 40% 98%; /* white (for accent elements if needed) */
+    --accent: 255.1 82.9% 60.8%;            /* purple-600 / #7c3aed */
+    --accent-foreground: 210 40% 98%;       /* white (for text on accent) */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 220.3 90.2% 52%; /* blue-600 for focus rings */
+    --ring: 220.3 90.2% 52%;                /* blue-600 for focus rings */
 
     --radius: 0.5rem;
 
@@ -42,6 +42,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
+    /* Sidebar colors from user's Main.css (light theme part) */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -53,8 +54,8 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%; /* Default dark background */
-    --foreground: 210 40% 98%; /* Default dark foreground */
+    --background: 222.2 84% 4.9%;        /* Default dark background from user's Main.css */
+    --foreground: 210 40% 98%;          /* Default dark foreground from user's Main.css */
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -62,16 +63,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 220.3 90.2% 52%; /* blue-600 */
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;             /* Primary for dark from user's Main.css */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Primary text for dark */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%; /* gray-600 */
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 255.1 82.9% 60.8%; /* purple-600 */
+    --accent: 217.2 32.6% 17.5%;        /* Accent for dark from user's Main.css */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -79,8 +80,9 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 220.3 90.2% 52%; /* blue-600 */
+    --ring: 212.7 26.8% 83.9%;          /* Ring for dark from user's Main.css */
     
+    /* Sidebar colors from user's Main.css (dark theme part) */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,17 +99,17 @@
     @apply border-border;
   }
   body {
-    @apply bg-slate-50 text-gray-800; /* Use slate-50 for light mode background, gray-800 for text */
+    @apply bg-background text-foreground; /* Use THEMED background and foreground */
     font-family: 'Inter', sans-serif; /* Default body font */
-    scroll-behavior: smooth; /* Added for smooth scrolling */
+    scroll-behavior: smooth;
   }
   .dark body {
-    @apply bg-gray-900 text-gray-50; /* Dark mode background and text */
+    @apply bg-background text-foreground; /* Dark theme variables will apply here */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline text-foreground; /* Space Grotesk, using themed foreground */
+    @apply font-headline text-foreground;
   }
-   p, li, span, div /* common text containers */ {
-     @apply font-body text-foreground; /* Inter, using themed foreground for base text */
+   p, li, span, div {
+     @apply font-body text-foreground;
   }
 }
