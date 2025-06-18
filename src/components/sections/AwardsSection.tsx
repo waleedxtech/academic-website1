@@ -35,9 +35,13 @@ const awardsData: AwardItem[] = [
   }
 ];
 
-export default function AwardsSection() {
+interface AwardsSectionProps {
+  className?: string;
+}
+
+export default function AwardsSection({ className }: AwardsSectionProps) {
   return (
-    <Section id="awards" title="Awards & Achievements" subtitle="">
+    <Section id="awards" title="Awards & Achievements" subtitle="" className={className}>
       <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg">
         <CardContent className="p-6 md:p-8">
           <ul className="space-y-4">
@@ -57,4 +61,3 @@ export default function AwardsSection() {
     </Section>
   );
 }
-

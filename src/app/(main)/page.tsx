@@ -12,22 +12,23 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import AwardsSection from '@/components/sections/AwardsSection';
 import HobbiesSection from '@/components/sections/HobbiesSection';
 
+const gradientBackground = "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-900 dark:to-sky-950/60";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      <AboutSection className={gradientBackground} />
       <SkillsSection />
-      <EducationSection />
+      <EducationSection className={gradientBackground} />
       <CourseworkSection />
-      <ResearchSection />
+      <ResearchSection className={gradientBackground} />
       <PublicationsSection />
-      <ExperienceSection />
+      <ExperienceSection className={gradientBackground} />
       <LeadershipExperienceSection />
-      <ProjectsSection />
+      <ProjectsSection className={gradientBackground} />
       <AwardsSection />
-      <HobbiesSection />
+      <HobbiesSection className={gradientBackground} />
     </>
   );
 }

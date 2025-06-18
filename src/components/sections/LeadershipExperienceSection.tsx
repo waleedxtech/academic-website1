@@ -27,13 +27,17 @@ const leadershipExperienceData: LeadershipExperienceItem[] = [
   },
 ];
 
-export default function LeadershipExperienceSection() {
+interface LeadershipExperienceSectionProps {
+  className?: string;
+}
+
+export default function LeadershipExperienceSection({ className }: LeadershipExperienceSectionProps) {
   if (!leadershipExperienceData || leadershipExperienceData.length === 0) {
     return null;
   }
 
   return (
-    <Section id="leadership-experience" title="Leadership Experience" subtitle="">
+    <Section id="leadership-experience" title="Leadership Experience" subtitle="" className={className}>
       <div className="space-y-8">
         {leadershipExperienceData.map((item, index) => (
           <Card

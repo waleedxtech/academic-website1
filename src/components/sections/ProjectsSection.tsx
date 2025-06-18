@@ -8,9 +8,13 @@ import { ArrowRight } from 'lucide-react';
 
 const featuredProjects = projects.slice(0, 3);
 
-export default function ProjectsSection() {
+interface ProjectsSectionProps {
+  className?: string;
+}
+
+export default function ProjectsSection({ className }: ProjectsSectionProps) {
   return (
-    <Section id="projects" title="Featured Projects" subtitle="">
+    <Section id="projects" title="Featured Projects" subtitle="" className={className}>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {featuredProjects.map((project, index) => (
           <ProjectCard 

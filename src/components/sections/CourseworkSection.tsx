@@ -14,9 +14,13 @@ const courseworkData = [
   "Embedded Systems"
 ];
 
-export default function CourseworkSection() {
+interface CourseworkSectionProps {
+  className?: string;
+}
+
+export default function CourseworkSection({ className }: CourseworkSectionProps) {
   return (
-    <Section id="coursework" title="Relevant Coursework" subtitle="">
+    <Section id="coursework" title="Relevant Coursework" subtitle="" className={className}>
       <div className="flex flex-wrap justify-center gap-3 md:gap-4">
         {courseworkData.map((course, index) => (
           <div

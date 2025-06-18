@@ -20,9 +20,13 @@ const hobbiesData: Hobby[] = [
   { name: "Building connections through professional networking", icon: NetworkingIcon }
 ];
 
-export default function HobbiesSection() {
+interface HobbiesSectionProps {
+  className?: string;
+}
+
+export default function HobbiesSection({ className }: HobbiesSectionProps) {
   return (
-    <Section id="hobbies" title="Hobbies & Interests" subtitle="What I Do Outside of Engineering">
+    <Section id="hobbies" title="Hobbies & Interests" subtitle="What I Do Outside of Engineering" className={className}>
       <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg">
         <CardContent className="p-6 md:p-8">
           <ul className="space-y-4">
@@ -42,4 +46,3 @@ export default function HobbiesSection() {
     </Section>
   );
 }
-

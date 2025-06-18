@@ -31,9 +31,13 @@ const internshipData: InternshipItem[] = [
   },
 ];
 
-export default function ExperienceSection() {
+interface ExperienceSectionProps {
+  className?: string;
+}
+
+export default function ExperienceSection({ className }: ExperienceSectionProps) {
   return (
-    <Section id="experience" title="Work Experience" subtitle="">
+    <Section id="experience" title="Work Experience" subtitle="" className={className}>
       <div className="space-y-8">
         {internshipData.map((item, index) => (
           <Card 

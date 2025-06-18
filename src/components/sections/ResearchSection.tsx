@@ -7,7 +7,7 @@ interface ResearchItem {
   title: string;
   period: string; 
   description: string[];
-  subtitle: string; // Added for content like "Academic Research Project"
+  subtitle: string; 
 }
 
 const researchData: ResearchItem[] = [
@@ -38,9 +38,13 @@ const researchData: ResearchItem[] = [
   },
 ];
 
-export default function ResearchSection() {
+interface ResearchSectionProps {
+  className?: string;
+}
+
+export default function ResearchSection({ className }: ResearchSectionProps) {
   return (
-    <Section id="research" title="Research Experience" subtitle="">
+    <Section id="research" title="Research Experience" subtitle="" className={className}>
       <div className="space-y-8">
         {researchData.map((item, index) => (
           <Card 
@@ -49,9 +53,11 @@ export default function ResearchSection() {
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <FlaskConical className="h-8 w-8 text-primary absolute top-6 right-6" />
-            <CardHeader className="pr-16"> {/* Add padding-right to avoid overlap with icon */}
+            <CardHeader className="pr-16"> 
               <CardTitle className="text-2xl font-bold font-headline text-foreground">{item.title}</CardTitle>
-              <CardDescription className="text-md text-primary font-medium">{item.subtitle}</CardDescription>
+              <CardDescription className="text-md text-primary font-medium">
+                {item.subtitle}
+              </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
               <div className="flex items-center text-muted-foreground text-sm mb-4 font-body">

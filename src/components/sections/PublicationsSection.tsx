@@ -21,7 +21,7 @@ const publicationData: PublicationItem[] = [
     title: 'Design and Development of Improved Micro Butt Welding Power Plant',
     authors: 'W. Abdullah, M. Barkat, M. Ijaz, R. Khan, R. Muzammel and A. Raza',
     conferenceName: '2022 International Conference on Electrical Engineering and Sustainable Technologies (ICEEST)',
-    // conferenceLink: 'https://example.com/iceest2022', // Add actual link if available
+    // conferenceLink: 'https://example.com/iceest2022', 
     location: 'Lahore, Pakistan',
     year: '2022',
     description: 'Presented an innovative design for economical butt welding machines suitable for local manufacturing environments.',
@@ -31,7 +31,7 @@ const publicationData: PublicationItem[] = [
     title: 'Design and Development of Solid-state DC Circuit Breaker',
     authors: 'U. Tahir, W. Abdullah and L. Ali',
     conferenceName: '2022 International Conference on Electrical Engineering and Sustainable Technologies (ICEEST)',
-    // conferenceLink: 'https://example.com/iceest2022', // Add actual link if available
+    // conferenceLink: 'https://example.com/iceest2022', 
     location: 'Lahore, Pakistan',
     year: '2022',
     description: 'Proposed a solid-state DC circuit breaker with low conduction loss, quick reclosing, and rebreaking capability to address control and stability challenges in DC power systems.',
@@ -39,9 +39,13 @@ const publicationData: PublicationItem[] = [
   },
 ];
 
-export default function PublicationsSection() {
+interface PublicationsSectionProps {
+  className?: string;
+}
+
+export default function PublicationsSection({ className }: PublicationsSectionProps) {
   return (
-    <Section id="publications" title="Publications" subtitle="My Contributions to Electrical Engineering Research">
+    <Section id="publications" title="Publications" subtitle="My Contributions to Electrical Engineering Research" className={className}>
       <div className="space-y-8">
         {publicationData.map((item, index) => (
           <Card 

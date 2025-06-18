@@ -38,9 +38,13 @@ const skillsData: SkillCategory[] = [
   }
 ];
 
-export default function SkillsSection() {
+interface SkillsSectionProps {
+  className?: string;
+}
+
+export default function SkillsSection({ className }: SkillsSectionProps) {
   return (
-    <Section id="skills" title="Technical Skills & Abilities" subtitle="">
+    <Section id="skills" title="Technical Skills & Abilities" subtitle="" className={className}>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillsData.map((skillCategory, index) => (
           <Card 

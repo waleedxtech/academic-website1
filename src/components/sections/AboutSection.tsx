@@ -45,9 +45,13 @@ const highlightData: HighlightItem[] = [
   },
 ];
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  className?: string;
+}
+
+export default function AboutSection({ className }: AboutSectionProps) {
   return (
-    <Section id="about" title="About Me" subtitle="Driven by Curiosity and a Passion for Innovation">
+    <Section id="about" title="About Me" subtitle="Driven by Curiosity and a Passion for Innovation" className={className}>
       <div className="grid md:grid-cols-5 gap-10 lg:gap-16 items-start">
         {/* Left Column: Text */}
         <div className="md:col-span-3 space-y-5">
