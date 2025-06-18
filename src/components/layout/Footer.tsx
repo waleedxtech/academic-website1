@@ -51,7 +51,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-tr from-primary to-accent text-primary-foreground py-12 md:py-16">
       <div className="container max-w-6xl mx-auto flex flex-col items-center space-y-8">
         <div className="text-center">
-          <h3 className="text-3xl font-bold font-headline mb-2">Let's connect</h3>
+          <h3 className="text-3xl font-bold font-headline mb-2 text-white">Let's connect</h3>
           <p className="text-primary-foreground/80 font-body">
             Feel free to reach out for collaborations or inquiries.
           </p>
@@ -62,7 +62,7 @@ export default function Footer() {
             {emailAndLocation.map((method) => (
               <div 
                 key={method.name} 
-                className="flex items-center gap-2 text-primary-foreground/90 font-body text-sm"
+                className="flex items-center gap-2 text-white font-body text-sm"
                 aria-label={method.ariaLabel}
               >
                 <method.icon className="h-5 w-5" />
