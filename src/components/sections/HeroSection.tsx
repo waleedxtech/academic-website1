@@ -44,19 +44,19 @@ export default function HeroSection() {
                 <span className="text-sm text-primary font-bold font-body">Lahore, Pakistan</span>
               </div>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-primary hover:text-primary-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-primary">
                   <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of Waleed Abdullah">
                     <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     LinkedIn
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-primary hover:text-primary-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-primary">
                   <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of Waleed Abdullah">
                     <Github className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     GitHub
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-primary hover:text-primary-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-primary">
                   <Link href="https://scholar.google.com/citations?user=Ald38KsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile of Waleed Abdullah">
                     <GraduationCap className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     Google Scholar
