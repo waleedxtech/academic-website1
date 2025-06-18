@@ -8,8 +8,8 @@ export default function HeroSection() {
   return (
     <section className="relative bg-background py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
-          <div className="md:col-span-2 flex justify-center md:justify-start animate-fade-in">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <div className="flex justify-center md:justify-start animate-fade-in order-1 md:order-none">
             <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"
@@ -22,7 +22,7 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="md:col-span-3 space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-6 text-center md:text-left animate-fade-in order-2 md:order-none" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
               Waleed Abdullah
             </h1>
@@ -35,28 +35,28 @@ export default function HeroSection() {
             <div className="flex flex-col items-center md:items-start gap-3 pt-4">
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
+                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-primary font-semibold hover:text-primary/80 transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
                   waleed.abdullah910@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-sm text-muted-foreground font-body">Lahore, Pakistan</span>
+                <span className="text-sm text-primary font-semibold font-body">Lahore, Pakistan</span>
               </div>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
                   <Link href="https://www.linkedin.com/in/waleedabdullah/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile of Waleed Abdullah">
                     <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     LinkedIn
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
                   <Link href="https://github.com/waleedx1" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile of Waleed Abdullah">
                     <Github className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     GitHub
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm">
+                <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
                   <Link href="https://scholar.google.com/citations?user=Ald38KsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile of Waleed Abdullah">
                     <GraduationCap className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                     Google Scholar
