@@ -60,18 +60,18 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 w-full">
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
             {emailAndLocation.map((method) => (
-              <div 
-                key={method.name} 
+              <div
+                key={method.name}
                 className="flex items-center gap-2 text-white font-body text-sm"
                 aria-label={method.ariaLabel}
               >
                 <method.icon className="h-5 w-5" />
                 {method.href && method.name === 'Email' ? (
-                  <Link href={method.href} className="hover:underline">
+                  <Link href={method.href} className="hover:underline text-white">
                     {method.value}
                   </Link>
                 ) : (
-                  <span>{method.value}</span>
+                  <span className="text-white">{method.value}</span>
                 )}
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function Footer() {
                 {method.href ? (
                   <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                     <method.icon className="mr-2 h-5 w-5" />
-                    {method.buttonText || method.name} 
+                    {method.buttonText || method.name}
                   </Link>
                 ) : (
                    <>
@@ -100,7 +100,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        
+
         <div className="w-full border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
           <div className="flex items-center space-x-2">
              <span className="font-semibold font-headline text-white">Waleed Abdullah</span>
