@@ -41,13 +41,12 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
           {project.shortDescription}
         </CardDescription>
         <div>
-          <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-1.5">Technologies:</h4>
+          <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-1.5 font-headline">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <Badge 
                 key={tech} 
-                variant="outline" 
-                className="border-black text-black bg-transparent px-2.5 py-0.5 text-xs hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                className="bg-blue-100/70 dark:bg-sky-900/40 text-primary dark:text-sky-300 px-3 py-1 text-xs rounded-full font-medium border-transparent hover:bg-blue-200/70 dark:hover:bg-sky-800/60 transition-colors"
               >
                 {tech}
               </Badge>
@@ -81,4 +80,3 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
     </Card>
   );
 }
-

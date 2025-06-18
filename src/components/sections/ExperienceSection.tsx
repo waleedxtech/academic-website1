@@ -1,7 +1,7 @@
 
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, CalendarDays } from 'lucide-react'; 
+import { Briefcase, CalendarDays, Trophy } from 'lucide-react'; 
 
 interface InternshipItem {
   type: 'Internship';
@@ -34,40 +34,45 @@ const internshipData: InternshipItem[] = [
 export default function ExperienceSection() {
   return (
     <Section id="experience" title="Work Experience" subtitle="">
-      <div className="space-y-12">
+      <div className="space-y-8">
         {internshipData.map((item, index) => (
           <Card 
             key={index} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 animate-fade-in relative overflow-hidden"
             style={{ animationDelay: `${index * 0.1}s` }}
-            >
-            <CardHeader className="flex flex-row items-start bg-slate-100/80 dark:bg-slate-800/80 p-6 space-x-4"> {/* Adjusted opacity of header for better gradient visibility */}
-              <div className="p-3 bg-primary/10 rounded-full">
-                <Briefcase className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <CardTitle className="text-xl font-bold font-headline text-foreground">{item.title}</CardTitle>
-                <CardDescription className="text-lg text-muted-foreground">
-                  {item.organization} - <span className="italic">{item.location}</span>
-                </CardDescription>
-              </div>
+          >
+            <Briefcase className="h-8 w-8 text-primary absolute top-6 right-6" />
+            <CardHeader className="pr-16">
+              <CardTitle className="text-2xl font-bold font-headline text-foreground">{item.title}</CardTitle>
+              <CardDescription className="text-md text-primary font-medium">
+                {item.organization} - <span className="italic text-primary/80">{item.location}</span>
+              </CardDescription>
             </CardHeader>
-            <CardContent className="p-6 space-y-3">
-              <div className="flex items-center text-muted-foreground font-body">
-                <CalendarDays className="h-5 w-5 mr-2 text-primary/70" />
+            <CardContent className="pt-0">
+              <div className="flex items-center text-muted-foreground text-sm mb-4 font-body">
+                <CalendarDays className="h-4 w-4 mr-2 text-primary/80" />
                 <span>{item.period}</span>
               </div>
-              {Array.isArray(item.description) ? (
-                <ul className="space-y-2">
-                  {item.description.map((descItem, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="flex-shrink-0 w-2 h-2 bg-primary/70 rounded-full mr-3 mt-[0.45em]"></span>
-                      <span className="font-body text-foreground/90 leading-relaxed">{descItem}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="font-body text-foreground/90 leading-relaxed">{item.description}</p>
+              
+              {item.description && (
+                <>
+                  <div className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3 mt-4 font-headline">
+                    <Trophy className="h-5 w-5 text-amber-500" />
+                    Key Responsibilities:
+                  </div>
+                  {Array.isArray(item.description) ? (
+                    <ul className="space-y-2">
+                      {item.description.map((descItem, i) => (
+                        <li key={i} className="flex items-start gap-2.5">
+                          <div className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-primary"></div>
+                          <span className="font-body text-foreground/90 leading-relaxed">{descItem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="font-body text-foreground/90 leading-relaxed">{item.description}</p>
+                  )}
+                </>
               )}
             </CardContent>
           </Card>
@@ -76,4 +81,3 @@ export default function ExperienceSection() {
     </Section>
   );
 }
-

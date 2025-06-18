@@ -85,8 +85,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             {project.technologies.map((tech) => (
               <Badge 
                 key={tech} 
-                variant="outline" 
-                className="border-black text-black bg-transparent px-3 py-1 text-sm hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                className="bg-blue-100/70 dark:bg-sky-900/40 text-primary dark:text-sky-300 px-3 py-1.5 text-sm rounded-full font-medium border-transparent hover:bg-blue-200/70 dark:hover:bg-sky-800/60 transition-colors"
               >
                 {tech}
               </Badge>

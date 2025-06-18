@@ -29,19 +29,15 @@ export default function PublicationsSection() {
         {publicationData.map((item, index) => (
           <Card 
             key={index} 
-            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
+            className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:scale-105 animate-fade-in relative overflow-hidden"
             style={{ animationDelay: `${index * 0.1}s` }}
-            >
-            <CardHeader className="flex flex-row items-start bg-slate-100/80 dark:bg-slate-800/80 p-6 space-x-4"> {/* Adjusted opacity of header for better gradient visibility */}
-              <div className="p-3 bg-primary/10 rounded-full">
-                <BookText className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <CardTitle className="text-xl font-bold font-headline text-foreground">{item.title}</CardTitle>
-              </div>
+          >
+            <BookText className="h-8 w-8 text-primary absolute top-6 right-6" />
+            <CardHeader className="pr-16">
+              <CardTitle className="text-2xl font-bold font-headline text-foreground">{item.title}</CardTitle>
             </CardHeader>
-            <CardContent className="p-6 space-y-2">
-              <CardDescription className="text-md text-muted-foreground font-body italic">
+            <CardContent className="pt-0">
+              <CardDescription className="text-md text-muted-foreground font-body italic mb-2">
                 {item.journal}
               </CardDescription>
               <p className="font-body text-sm text-foreground/80">
@@ -54,4 +50,3 @@ export default function PublicationsSection() {
     </Section>
   );
 }
-
