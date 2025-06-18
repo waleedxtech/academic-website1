@@ -24,7 +24,7 @@ export default function HeroSection() {
           </div>
           <div className="space-y-6 text-center md:text-left animate-fade-in order-2 md:order-none" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
-              Waleed Abdullah
+              Waleed <span className="text-primary">Abdullah</span>
             </h1>
             <p className="text-2xl md:text-3xl font-light text-primary font-headline">
               Electrical Engineer
@@ -35,13 +35,13 @@ export default function HeroSection() {
             <div className="flex flex-col items-center md:items-start gap-3 pt-4">
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-primary font-semibold hover:text-primary/80 transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
+                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-primary font-bold hover:text-primary/80 transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
                   waleed.abdullah910@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-sm text-primary font-semibold font-body">Lahore, Pakistan</span>
+                <span className="text-sm text-primary font-bold font-body">Lahore, Pakistan</span>
               </div>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
                 <Button asChild variant="outline" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full hover:bg-accent hover:text-accent-foreground px-4 py-2 text-sm border-2 border-primary/60 hover:border-accent">
