@@ -7,6 +7,7 @@ const navItems = [
   { href: '/#about', label: 'About' },
   { href: '/#skills', label: 'Skills' },
   { href: '/#research', label: 'Research' },
+  { href: '/#publications', label: 'Publications' },
   { href: '/#experience', label: 'Experience' },
   { href: '/#projects', label: 'Projects' },
 ];
@@ -15,6 +16,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
       <div className="container flex h-16 max-w-6xl items-center">
+        <Link href="/" className="mr-6 flex items-center space-x-2">
+          <span className="font-bold text-lg text-foreground hover:text-primary transition-colors font-headline">Waleed Abdullah</span>
+        </Link>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
           {navItems.map((item) => (
             <Link
@@ -26,7 +30,7 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden"> {/* Spacer for mobile to push menu to right */}
+        <div className="flex flex-1 items-center justify-end space-x-4 md:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -50,8 +54,7 @@ export default function Navbar() {
             </SheetContent>
           </Sheet>
         </div>
-         <div className="hidden md:flex flex-1 items-center justify-end space-x-4"> {/* Spacer for desktop if nav is not taking full width */}
-          {/* Add any right-aligned desktop items here if needed in the future */}
+         <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
         </div>
       </div>
     </header>
