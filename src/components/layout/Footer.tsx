@@ -8,7 +8,7 @@ const contactMethods = [
     icon: Mail,
     value: 'waleed.abdullah910@gmail.com',
     href: 'mailto:waleed.abdullah910@gmail.com',
-    ariaLabel: 'Send an Email to Waleed Abdullah',
+    ariaLabel: 'Email Waleed Abdullah at waleed.abdullah910@gmail.com',
   },
   {
     name: 'LinkedIn',
@@ -47,7 +47,7 @@ export default function Footer() {
             >
               <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} aria-label={method.ariaLabel}>
                 <method.icon className="mr-2 h-5 w-5" />
-                {method.name === 'Email' ? 'Send Email' : `View ${method.name}`}
+                {method.name === 'Email' ? method.value : `View ${method.name}`}
               </Link>
             </Button>
           ))}
