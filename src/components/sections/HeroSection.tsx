@@ -6,10 +6,10 @@ import { Github, Linkedin, Mail, GraduationCap, MapPin } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-background py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="flex justify-center md:order-none order-first animate-fade-in">
+        <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+          <div className="md:col-span-2 flex justify-center md:justify-start animate-fade-in">
             <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"
@@ -22,7 +22,7 @@ export default function HeroSection() {
               />
             </div>
           </div>
-          <div className="space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="md:col-span-3 space-y-6 text-center md:text-left animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight font-headline text-foreground">
               Waleed Abdullah
             </h1>
@@ -67,8 +67,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-       <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
-       <div className="absolute -top-16 -right-16 w-72 h-72 bg-accent/10 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-2000"></div>
+       <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+       <div className="absolute -top-16 -right-16 w-80 h-80 bg-accent/10 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-2000"></div>
     </section>
   );
 }

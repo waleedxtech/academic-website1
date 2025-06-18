@@ -9,7 +9,6 @@ interface SkillCategory {
   category: string;
   icon: LucideIcon;
   skills: string[];
-  gradient: string; 
 }
 
 const skillsData: SkillCategory[] = [
@@ -17,31 +16,26 @@ const skillsData: SkillCategory[] = [
     category: "Software",
     icon: Code,
     skills: ["MATLAB", "Simulink", "ETAP", "DigSilent PowerFactory", "ANSYS Maxwell", "CST Studio", "AutoCAD", "Multisim", "Proteus"],
-    gradient: "from-blue-400 to-purple-500" 
   },
   {
     category: "Technical Skills",
     icon: CircuitBoard,
     skills: ["Power System Studies", "System Design", "Finite Element Analysis", "PCB Design and Fabrication", "LaTeX"],
-    gradient: "from-green-400 to-teal-500"
   },
   {
     category: "Programming",
     icon: Cpu,
     skills: ["C++", "MATLAB", "Embedded Systems", "Arduino"],
-    gradient: "from-purple-400 to-pink-500"
   },
   {
     category: "Soft Skills",
     icon: Users,
     skills: ["Self-Motivation", "Problem Solving", "Critical Thinking", "Creativity", "Attention to Detail"],
-    gradient: "from-yellow-400 to-orange-500"
   },
   {
     category: "Actively Enhancing",
     icon: TrendingUp,
     skills: ["Python", "Machine Learning", "Optimization", "PSCAD", "Power System Studies (PSS/E)"],
-    gradient: "from-red-400 to-orange-500"
   }
 ];
 
@@ -55,7 +49,7 @@ export default function SkillsSection() {
             className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-105 animate-fade-in"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className={`h-2 bg-gradient-to-r ${skillCategory.gradient}`}></div>
+            <div className="h-2 bg-gradient-to-r from-primary to-accent"></div>
             <CardHeader className="items-center text-center p-6">
               <skillCategory.icon className="h-10 w-10 text-primary mb-3" />
               <CardTitle className="text-xl font-bold font-headline text-card-foreground">{skillCategory.category}</CardTitle>

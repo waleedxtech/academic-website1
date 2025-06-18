@@ -23,6 +23,7 @@ const contactMethods = [
     value: 'linkedin.com/in/waleedabdullah',
     href: 'https://www.linkedin.com/in/waleedabdullah/',
     ariaLabel: 'View Waleed Abdullah\'s LinkedIn Profile',
+    buttonText: 'LinkedIn',
   },
   {
     name: 'GitHub',
@@ -30,6 +31,7 @@ const contactMethods = [
     value: 'github.com/waleedx1',
     href: 'https://github.com/waleedx1',
     ariaLabel: 'View Waleed Abdullah\'s GitHub Profile',
+    buttonText: 'GitHub',
   },
   {
     name: 'Google Scholar',
@@ -37,6 +39,7 @@ const contactMethods = [
     value: 'Google Scholar',
     href: 'https://scholar.google.com/citations?user=Ald38KsAAAAJ',
     ariaLabel: 'View Waleed Abdullah\'s Google Scholar Profile',
+    buttonText: 'Google Scholar',
   },
 ];
 
@@ -45,7 +48,7 @@ export default function Footer() {
   const socialLinks = contactMethods.filter(m => m.name !== 'Email' && m.name !== 'Location');
 
   return (
-    <footer className="bg-gradient-to-tr from-accent via-purple-700 to-indigo-800 dark:from-accent/80 dark:via-purple-800/80 dark:to-indigo-900/80 text-primary-foreground py-12 md:py-16">
+    <footer className="bg-gradient-to-tr from-primary to-accent text-primary-foreground py-12 md:py-16">
       <div className="container max-w-6xl mx-auto flex flex-col items-center space-y-8">
         <div className="text-center">
           <h3 className="text-3xl font-bold font-headline mb-2">Let's connect</h3>
@@ -63,8 +66,8 @@ export default function Footer() {
                 aria-label={method.ariaLabel}
               >
                 <method.icon className="h-5 w-5" />
-                {method.href ? (
-                  <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined} className="hover:underline">
+                {method.href && method.name === 'Email' ? (
+                  <Link href={method.href} className="hover:underline">
                     {method.value}
                   </Link>
                 ) : (
@@ -85,12 +88,12 @@ export default function Footer() {
                 {method.href ? (
                   <Link href={method.href} target={method.href.startsWith('http') ? '_blank' : undefined} rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                     <method.icon className="mr-2 h-5 w-5" />
-                    {method.name} 
+                    {method.buttonText || method.name} 
                   </Link>
                 ) : (
                    <>
                     <method.icon className="mr-2 h-5 w-5" />
-                    {method.value}
+                    {method.buttonText || method.value}
                   </>
                 )}
               </Button>
