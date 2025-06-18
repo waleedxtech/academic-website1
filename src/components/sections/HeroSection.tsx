@@ -8,8 +8,8 @@ export default function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950 py-20 md:py-32 overflow-hidden">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="flex justify-center md:justify-start animate-fade-in order-first">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="flex justify-center md:order-none order-first animate-fade-in">
             <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl group">
               <Image
                 src="https://placehold.co/400x400.png"
@@ -27,7 +27,7 @@ export default function HeroSection() {
               Waleed Abdullah
             </h1>
             <p className="text-2xl md:text-3xl font-light text-primary font-headline">
-              Gold Medalist Electrical Engineer
+              Electrical Engineer
             </p>
             <p className="text-lg md:text-xl text-muted-foreground font-body">
               A Gold Medalist Electrical Engineer with a strong academic background, complemented by professional and research experience. Highly motivated and driven by curiosity, I bring a passion for solving complex problems, along with energy, enthusiasm, innovative thinking, and a mindset of continuous improvement.
