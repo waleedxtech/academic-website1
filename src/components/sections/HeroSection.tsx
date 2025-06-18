@@ -29,7 +29,7 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl text-muted-foreground font-body">
               A Gold Medalist Electrical Engineer with a strong academic background, complemented by professional and research experience. Highly motivated and driven by curiosity, I bring a passion for solving complex problems, along with energy, enthusiasm, innovative thinking, and a mindset of continuous improvement.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start pt-4">
+            <div className="flex flex-col items-center md:items-start gap-3 pt-4">
               <Link href="mailto:waleed.abdullah910@gmail.com" aria-label="Email waleed.abdullah910@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="h-5 w-5 text-primary group-hover:text-primary/90 transition-colors" />
                 <span className="font-body">waleed.abdullah910@gmail.com</span>
