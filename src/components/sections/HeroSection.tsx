@@ -14,7 +14,7 @@ export default function HeroSection() {
               <Image
                 src="https://placehold.co/400x400.png"
                 alt="W. Abdullah - Electrical Engineer"
-                data-ai-hint="professional engineer"
+                data-ai-hint="profile portrait"
                 layout="fill"
                 objectFit="cover"
                 className="transform transition-all duration-500 ease-in-out group-hover:scale-105"
