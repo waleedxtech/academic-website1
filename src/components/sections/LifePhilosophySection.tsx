@@ -11,9 +11,9 @@ export default function LifePhilosophySection({ className }: LifePhilosophySecti
       id="life-philosophy"
       title="Life Philosophy"
       className={className}
-      showDivider={false}
-      titleClassName="text-center"
-      contentClassName="flex justify-center"
+      showDivider={false} // Ensures no divider line under the title
+      titleClassName="text-center" // Ensures the H2 title text is centered
+      contentClassName="flex justify-center" // Centers the content block holding the paragraph
     >
       <div className="max-w-3xl text-center bg-background/80 dark:bg-card/70 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-xl border border-border/30">
         <p className="text-lg md:text-xl leading-relaxed text-foreground/90 font-body">
