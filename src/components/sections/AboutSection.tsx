@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import Section from '@/components/ui/Section';
-import { Award, Brain, Target } from 'lucide-react';
+import { Award, Brain } from 'lucide-react';
 
 export default function AboutSection() {
   return (
-    <Section id="about" title="About Me" subtitle="A Glimpse into My Passion and Expertise">
+    <Section id="about" title="About Me" subtitle="Driven by Curiosity and a Passion for Innovation">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="relative aspect-square rounded-lg overflow-hidden shadow-xl group">
           <Image
             src="https://placehold.co/500x500.png"
-            alt="Profile Picture"
+            alt="Profile Picture of W. Abdullah"
             data-ai-hint="professional portrait"
             layout="fill"
             objectFit="cover"
@@ -19,11 +19,9 @@ export default function AboutSection() {
         </div>
         <div className="space-y-6">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I am a passionate and results-driven Electrical Engineer with a strong foundation in analog and digital circuit design, embedded systems, and power electronics. My journey in engineering is fueled by an insatiable curiosity and a desire to solve complex problems with innovative solutions.
+            A Gold Medalist Electrical Engineer with a strong academic background, complemented by professional and research experience. Highly motivated and driven by curiosity, I bring a passion for solving complex problems, along with energy, enthusiasm, innovative thinking, and a mindset of continuous improvement.
           </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Beyond technical skills, I am a firm believer in continuous learning and collaborative teamwork. I thrive in dynamic environments where I can contribute my expertise while also learning from others.
-          </p>
+          
           <div className="grid sm:grid-cols-2 gap-6 mt-8">
             <div className="flex items-start space-x-4 p-4 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <Brain className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
@@ -36,7 +34,7 @@ export default function AboutSection() {
               <Award className="h-10 w-10 text-primary flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold font-headline">Continuous Learner</h3>
-                <p className="text-muted-foreground">Always exploring new technologies and methodologies in the EE field.</p>
+                <p className="text-muted-foreground">Always exploring new technologies and embracing a mindset of continuous improvement.</p>
               </div>
             </div>
           </div>

@@ -11,10 +11,10 @@ export default function HeroSection() {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-square md:aspect-[3/4] rounded-lg overflow-hidden shadow-2xl group order-first md:order-last">
+          <div className="relative aspect-square md:aspect-[3/4] rounded-lg overflow-hidden shadow-2xl group order-first">
             <Image
               src="https://placehold.co/400x500.png" 
-              alt="ElectronFlow - Electrical Engineer"
+              alt="W. Abdullah - Electrical Engineer"
               data-ai-hint="professional engineer"
               layout="fill"
               objectFit="cover"
@@ -28,10 +28,10 @@ export default function HeroSection() {
               ElectronFlow
             </h1>
             <p className="text-2xl md:text-3xl font-semibold text-primary font-headline">
-              Electrical Engineer
+              Gold Medalist Electrical Engineer
             </p>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Passionate about designing innovative electrical systems and pushing the boundaries of technology. Welcome to my personal portfolio where I showcase my projects, skills, and professional journey.
+              A Gold Medalist Electrical Engineer with a strong academic background, complemented by professional and research experience. Highly motivated and driven by curiosity, I bring a passion for solving complex problems, along with energy, enthusiasm, innovative thinking, and a mindset of continuous improvement.
             </p>
             <div className="flex flex-row gap-4 justify-center md:justify-start pt-4">
               <Button asChild variant="outline" size="icon" className="group transition-all duration-300 ease-in-out hover:shadow-md rounded-full">

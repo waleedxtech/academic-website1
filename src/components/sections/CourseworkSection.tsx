@@ -3,14 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 
 const courseworkData = [
-  "Advanced Analog Circuit Design",
-  "Digital VLSI Design",
-  "Real-Time Operating Systems",
-  "Power Electronics Converters",
-  "Control Systems Engineering",
-  "Digital Signal Processing",
-  "Electromagnetics",
-  "Communication Systems"
+  "Power Distribution and Utilization",
+  "Power System Protection",
+  "Power System Analysis",
+  "Power Electronics",
+  "Electrical Power Transmission",
+  "Control Systems",
+  "Control of DC and AC Drives",
+  "Embedded Systems"
 ];
 
 export default function CourseworkSection() {
