@@ -35,8 +35,8 @@ export default function HeroSection() {
             <div className="flex flex-col items-center md:items-start gap-3 pt-4">
               <div className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <a href="mailto:waleed.abdullah910@gmail.com" className="text-sm text-primary font-bold hover:text-primary/80 transition-colors font-body" aria-label="Email waleed.abdullah910@gmail.com">
-                  waleed.abdullah910@gmail.com
+                <a href="mailto:waleedabdullah.ee@gmail.com" className="text-sm text-primary font-bold hover:text-primary/80 transition-colors font-body" aria-label="Email waleedabdullah.ee@gmail.com">
+                  waleedabdullah.ee@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">

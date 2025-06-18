@@ -7,9 +7,9 @@ const contactMethods = [
   {
     name: 'Email',
     icon: Mail,
-    value: 'waleed.abdullah910@gmail.com',
-    href: 'mailto:waleed.abdullah910@gmail.com',
-    ariaLabel: 'Email Waleed Abdullah at waleed.abdullah910@gmail.com',
+    value: 'waleedabdullah.ee@gmail.com',
+    href: 'mailto:waleedabdullah.ee@gmail.com',
+    ariaLabel: 'Email Waleed Abdullah at waleedabdullah.ee@gmail.com',
   },
   {
     name: 'Location',
@@ -65,7 +65,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white font-body text-sm"
                 aria-label={method.ariaLabel}
               >
-                <method.icon className="h-5 w-5" />
+                <method.icon className="h-5 w-5 text-white" />
                 {method.href && method.name === 'Email' ? (
                   <Link href={method.href} className="hover:underline text-white">
                     {method.value}
