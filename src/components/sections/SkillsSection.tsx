@@ -1,7 +1,7 @@
 
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CircuitBoard, Cpu, Code, Users, TrendingUp, ChevronRight } from 'lucide-react';
+import { CircuitBoard, Cpu, Code, Users, TrendingUp } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface SkillCategory {
@@ -59,9 +59,12 @@ export default function SkillsSection({ className }: SkillsSectionProps) {
             <CardContent className="p-6 pt-0 flex-grow">
               <ul className="space-y-2 text-left">
                 {skillCategory.skills.map((skill) => (
-                  <li key={skill} className="flex items-center text-card-foreground font-body text-sm">
-                    <ChevronRight className="h-4 w-4 mr-2 text-primary flex-shrink-0" />
-                    {skill}
+                  <li 
+                    key={skill} 
+                    className="flex items-start gap-2.5 text-card-foreground font-body text-sm"
+                  >
+                    <div className="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></div>
+                    <span>{skill}</span>
                   </li>
                 ))}
               </ul>
