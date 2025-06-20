@@ -5,7 +5,9 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "public/index.html",
+      "public/index.htm"
     ],
     "frameworksBackend": {
       "region": "us-central1",
