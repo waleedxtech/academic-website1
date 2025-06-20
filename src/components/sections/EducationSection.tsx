@@ -150,7 +150,7 @@ export default function EducationSection({ className }: EducationSectionProps) {
             {certificationsAndTrainingData.map((cert, index) => (
               <div
                 key={index}
-                className="bg-emerald-50 dark:bg-emerald-950/40 rounded-lg p-4 shadow-sm flex items-start gap-3 hover:shadow-md transition-shadow duration-300"
+                className="bg-emerald-100 dark:bg-emerald-900/50 rounded-lg p-4 shadow-sm flex items-start gap-3 hover:shadow-md transition-shadow duration-300"
               >
                 <cert.icon className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <div>
