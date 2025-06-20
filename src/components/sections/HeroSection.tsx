@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail, GraduationCap, MapPin } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-background pt-8 md:pt-12 pb-16 md:pb-20 overflow-hidden">
+    <section className="relative bg-background min-h-screen flex items-center justify-center overflow-hidden py-12">
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-12">
           <div className="flex-shrink-0 animate-fade-in md:order-1">
