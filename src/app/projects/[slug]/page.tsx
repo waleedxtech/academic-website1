@@ -26,9 +26,6 @@ export async function generateMetadata(
   return {
     title: `${project.title} - ElectronFlow`,
     description: project.shortDescription,
-    // openGraph: {
-    //   images: [project.imageUrl],
-    // },
   };
 }
 
@@ -71,9 +68,19 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
 
         <div className="max-w-none mb-8 md:mb-12 font-body text-foreground text-lg leading-relaxed">
-          {project.longDescription.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="text-foreground/90 mb-6">{paragraph}</p>
-          ))}
+          {Array.isArray(project.longDescription) ? (
+            <ul className="space-y-4 list-disc pl-5">
+              {project.longDescription.map((item, index) => (
+                <li key={index} className="text-foreground/90">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            project.longDescription.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-foreground/90 mb-6">{paragraph}</p>
+            ))
+          )}
         </div>
         
         <div className="mb-8 md:mb-12">
