@@ -1,3 +1,4 @@
+
 import Section from '@/components/ui/Section';
 import Image from 'next/image';
 
@@ -83,15 +84,27 @@ export default function AboutSection({ className }: AboutSectionProps) {
               </div>
             ))}
           </div>
-          <div className="relative aspect-square mt-8 rounded-lg overflow-hidden shadow-lg group">
-            <Image
-              src="https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Gold_Medal_ysmgdg.jpg"
-              alt="Gold Medal awarded at convocation"
-              data-ai-hint="gold medal award"
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-500 ease-in-out group-hover:scale-105"
-            />
+          <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
+              <Image
+                src="https://res.cloudinary.com/dcajabot9/image/upload/v1750578786/Gold_Medal__3_d6dpe0.jpg"
+                alt="Receiving gold medal at convocation"
+                data-ai-hint="award ceremony"
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+              />
+            </div>
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
+              <Image
+                src="https://res.cloudinary.com/dcajabot9/image/upload/v1750578789/Gold_Medal__1_n6eqt9.jpg"
+                alt="Waleed Abdullah with gold medal"
+                data-ai-hint="gold medal"
+                layout="fill"
+                objectFit="cover"
+                className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </div>
