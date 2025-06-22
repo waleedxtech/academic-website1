@@ -1,4 +1,3 @@
-
 import Section from '@/components/ui/Section';
 import Image from 'next/image';
 
@@ -84,14 +83,14 @@ export default function AboutSection({ className }: AboutSectionProps) {
               </div>
             ))}
           </div>
-          <div className="relative mt-8 rounded-lg overflow-hidden shadow-lg">
+          <div className="relative mt-8 rounded-lg overflow-hidden shadow-lg group">
             <Image
               src="https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Gold_Medal_ysmgdg.jpg"
               alt="Gold Medal awarded at convocation"
               data-ai-hint="gold medal award"
               width={500}
               height={500}
-              className="w-full h-auto"
+              className="w-full h-auto transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
           </div>
         </div>
