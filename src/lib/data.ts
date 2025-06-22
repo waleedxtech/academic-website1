@@ -63,7 +63,7 @@ A functional prototype of the complete system was fabricated and tested, success
       'Designed a MOSFET-based full H-bridge inverter with variable frequency output (10 Hz to 100 kHz).',
       'Developed gate drive circuits and generated gate pulses using an Arduino Nano microcontroller.',
       'Simulated the inverter circuit using MATLAB and Proteus.',
-      'Designed and fabricated the PCB.'
+      'Designed and fabricated the PCB, followed by successful hardware implementation.'
     ],
     imageUrls: [],
     imageHints: ['inverter circuit pcb'],
