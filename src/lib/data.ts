@@ -78,6 +78,15 @@ A functional prototype of the complete system was fabricated and tested, success
     imageHints: ['levitating object magnet'],
     technologies: ['Analog PID Control', 'Control Systems', 'Electromagnetism', 'Circuit Design', 'Sensors'],
   },
+  {
+    slug: 'home-automation-stm32',
+    title: 'Home Automation using STM32F1 Microcontroller',
+    shortDescription: 'Developed a home automation system using STM32F1 microcontroller and Android phone. Enabled wireless control of home appliances via mobile interface.',
+    longDescription: 'This project demonstrates a basic home automation system using the STM32F1 microcontroller and an Android mobile application. The goal was to enable wireless control of home appliances to enhance convenience and accessibility.\n\nA Bluetooth module was interfaced with the STM32F1, allowing communication between the mobile phone and the microcontroller. Through a custom-built Android app, users could send commands to switch devices on or off in real time. The STM32 received and processed these commands to control relays connected to various electrical loads.\n\nThis project showcases fundamental concepts of IoT, embedded systems, and human-machine interaction. It provided hands-on experience with microcontroller programming, wireless communication, and system integration for smart home applications.',
+    imageUrls: [],
+    imageHints: ['home automation app'],
+    technologies: ['STM32', 'Embedded Systems', 'Android Development', 'Bluetooth', 'IoT'],
+  },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
