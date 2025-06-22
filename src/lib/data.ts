@@ -130,8 +130,56 @@ This project involved designing, simulating, and analyzing both modulators to un
     imageUrls: [],
     technologies: ['Power Electronics', 'Circuit Design', 'PCB Design', 'Rectifiers', 'Voltage Regulation'],
   },
+  {
+    slug: 'capacitor-inductor-cst-studio',
+    title: 'Capacitor and Inductor Design in CST Studio',
+    shortDescription: 'Designed and simulated capacitors and inductors using CST Studio to analyze electromagnetic field behavior and extract component parameters.',
+    longDescription: `This project involved designing and simulating capacitors and inductors using CST Studio’s 3D electromagnetic simulation tools. Custom component geometries were modeled, and simulations were conducted to analyze electric and magnetic field distributions.
+
+A parametric sweep was applied to study how changes in physical dimensions affected performance metrics such as capacitance and inductance. This enabled the optimization of design parameters to achieve the desired electrical characteristics.
+
+The project provided practical experience in electromagnetic simulation, parametric analysis, and passive component modeling using CST Studio.`,
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576097/Project_4_qkjdm8.jpg'],
+    imageHints: ['capacitor simulation'],
+    technologies: ['CST Studio', 'Electromagnetic Simulation', 'Component Modeling', 'Parametric Analysis'],
+  },
+  {
+    slug: 'mobile-controlled-car-stm32',
+    title: 'Mobile Controlled Car via Bluetooth using STM32F1 Microcontroller',
+    shortDescription: 'Developed a Bluetooth-controlled car using STM32F1, operable via an Android smartphone app for directional control.',
+    longDescription: `This project involved designing and building a Bluetooth-controlled robotic car using the STM32F1 microcontroller. The system allowed a user to control the car’s movement through an Android smartphone application.
+
+The Bluetooth module (HC-05) was used to establish wireless serial communication between the phone and the microcontroller. Upon receiving commands via Bluetooth, the STM32F1 decoded and executed motor control signals to drive the car in different directions—forward, reverse, left, and right.
+
+The car's motor driver circuit was implemented to control two DC motors based on input commands. The firmware was developed using embedded C and uploaded via STM32CubeIDE. Real-time testing verified seamless connectivity, accurate motor responses, and stable directional control.
+
+This project provided practical experience in embedded hardware design, Bluetooth communication, and mobile interfacing for robotic applications.`,
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576094/Project_3_tbnicu.jpg'],
+    imageHints: ['robotic car bluetooth'],
+    technologies: ['STM32F1', 'Bluetooth', 'Android', 'Embedded C', 'Robotics', 'STM32CubeIDE'],
+  },
+  {
+    slug: 'pcb-design-fabrication',
+    title: 'PCB Design and Fabrication',
+    shortDescription: 'Designed and fabricated multiple custom PCBs for various projects. This included schematic design, layout routing, and preparing Gerber files for manufacturing.',
+    longDescription: 'Designed and fabricated multiple custom PCBs for various projects. This included schematic design, layout routing, and preparing Gerber files for manufacturing.',
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Project_2_yz3zdx.jpg'],
+    imageHints: ['circuit board design'],
+    technologies: ['PCB Design', 'Schematic Design', 'Gerber Files', 'Hardware Fabrication'],
+  },
+  {
+    slug: 'temperature-sensor-stm32',
+    title: 'Temperature measuring device using STM32F1 Microcontroller',
+    shortDescription: 'Designed and implemented a temperature measuring device using an LM35 temperature measuring sensor.',
+    longDescription: 'Designed and implemented a temperature measuring device using an LM35 temperature measuring sensor.',
+    imageUrls: [],
+    imageHints: ['temperature sensor circuit'],
+    technologies: ['STM32F1', 'LM35 Sensor', 'Embedded Systems', 'Analog-to-Digital Conversion'],
+  },
 ];
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find(p => p.slug === slug);
 }
+
+    
