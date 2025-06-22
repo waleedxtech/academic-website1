@@ -12,7 +12,7 @@ export default function HeroSection() {
           <div className="flex-shrink-0 animate-fade-in md:order-1">
             <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl group">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1J8mKrRppzXGJF-NTdgAY7kGT5xSBS0eg"
+                src="https://res.cloudinary.com/dcajabot9/image/upload/v1750574547/Display_Photo_1_g5f9xj.webp"
                 alt="W. Abdullah - Electrical Engineer"
                 data-ai-hint="profile portrait"
                 layout="fill"
