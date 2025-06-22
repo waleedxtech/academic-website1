@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Waleed Abdullah - Portfolio',
+  title: 'Waleed Abdullah',
   description: 'Personal portfolio showcasing projects and skills in electrical engineering.',
 };
 
