@@ -73,7 +73,7 @@ export default function AboutSection({ className }: AboutSectionProps) {
             {highlightData.map((item, index) => (
               <div
                 key={index}
-                className={`${item.gradient} ${item.darkGradient} rounded-lg hover:shadow-lg transition-shadow duration-300 flex flex-col justify-center items-center p-2 text-center aspect-square w-24 sm:w-28`}
+                className={`${item.gradient} ${item.darkGradient} rounded-lg hover:shadow-lg transition-shadow duration-300 flex flex-1 flex-col justify-center items-center p-2 text-center aspect-square max-w-28`}
               >
                 <div className={`text-xl sm:text-2xl font-bold ${item.textClass} ${item.darkTextClass}`}>
                   {item.value}
