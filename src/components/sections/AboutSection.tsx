@@ -87,7 +87,7 @@ export default function AboutSection({ className }: AboutSectionProps) {
           <div className="grid grid-cols-2 gap-4 mt-8">
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="https://res.cloudinary.com/dcajabot9/image/upload/v1750578786/Gold_Medal__3_d6dpe0.jpg"
+                src="https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581915/Gold_Medal_1_square_dstekz.jpg"
                 alt="Receiving gold medal at convocation"
                 data-ai-hint="award ceremony"
                 layout="fill"
@@ -97,7 +97,7 @@ export default function AboutSection({ className }: AboutSectionProps) {
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
               <Image
-                src="https://res.cloudinary.com/dcajabot9/image/upload/v1750578789/Gold_Medal__1_n6eqt9.jpg"
+                src="https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581916/Gold_Medal_2_square_gcg2ja.jpg"
                 alt="Waleed Abdullah with gold medal"
                 data-ai-hint="gold medal"
                 layout="fill"
