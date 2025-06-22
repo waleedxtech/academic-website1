@@ -1,7 +1,6 @@
 
 import { getProjectBySlug, projects } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Section from '@/components/ui/Section';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -63,16 +62,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               Back to All Projects
             </Link>
           </Button>
-        </div>
-
-        <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-xl mb-8 md:mb-12">
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            data-ai-hint={project.imageHint || "technology project detail"}
-            layout="fill"
-            objectFit="cover"
-          />
         </div>
 
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8 md:mb-12 font-body text-foreground">

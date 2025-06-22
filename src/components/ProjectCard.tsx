@@ -1,8 +1,7 @@
 
-import Image from 'next/image';
 import Link from 'next/link';
 import type { Project } from '@/types';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Github, ExternalLink } from 'lucide-react';
@@ -23,18 +22,6 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
       )}
       style={style}
     >
-      <CardHeader className="p-0">
-        <div className="relative aspect-video w-full">
-          <Image
-            src={project.imageUrl}
-            alt={project.title}
-            data-ai-hint={project.imageHint || "technology project"}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-      </CardHeader>
       <CardContent className="p-6 flex-grow space-y-3">
         <CardTitle className="text-xl font-bold font-headline text-card-foreground mb-1">{project.title}</CardTitle>
         <CardDescription className="text-muted-foreground text-sm leading-relaxed font-body">
