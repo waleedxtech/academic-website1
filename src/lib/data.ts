@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Design and Implementation of Resistance Butt Welding Machine',
     shortDescription: 'Designed a high-current transformer, validated through FEA, developed mechanical components, and built a functional prototype.',
     longDescription: 'Introduced a simplified and economical butt welding machine design suitable for local bulk production. Conducted market research, designed a high-current transformer (validated via Finite Element Analysis), developed mechanical structure, and built a working prototype. This work was also presented at a conference.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://res.cloudinary.com/dcajabot9/image/upload/v1750576104/Project_10_FYP_zfamz3.jpg',
     imageHint: 'welding machine industrial',
     technologies: ['FEA (ANSYS Maxwell)', 'Transformer Design', 'Mechanical Design', 'Prototyping', 'Circuit Simulation'],
     details: 'The project involved comprehensive market research and literature review to identify gaps in existing technologies. A key component was the design of a high current transformer, meticulously validated through computer simulations including Finite Element Analysis. The mechanical structure and operational mechanism for welding were also designed and developed as part of this project. The findings and development were presented at an international conference.',
