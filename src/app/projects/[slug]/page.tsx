@@ -68,23 +68,12 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-headline">
               {project.title}
             </h2>
-            {project.shortDescription && (
-              <p className="mt-3 text-lg md:text-xl text-muted-foreground">
-                {project.shortDescription}
-              </p>
-            )}
         </div>
 
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8 md:mb-12 font-body text-foreground">
           {project.longDescription.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-foreground/90">{paragraph}</p>
           ))}
-          {project.details && (
-            <>
-              <h3 className="font-headline text-2xl font-bold mt-8 mb-4 text-foreground">Technical Details</h3>
-              <p className="text-foreground/90">{project.details}</p>
-            </>
-          )}
         </div>
         
         <div className="mb-8 md:mb-12">
