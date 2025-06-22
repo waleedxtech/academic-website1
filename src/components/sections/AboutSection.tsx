@@ -1,5 +1,6 @@
 
 import Section from '@/components/ui/Section';
+import Image from 'next/image';
 
 interface HighlightItem {
   value: string;
@@ -35,14 +36,6 @@ const highlightData: HighlightItem[] = [
     darkGradient: "dark:from-purple-900/80 dark:to-purple-950/80",
     darkTextClass: "dark:text-purple-400",
   },
-  {
-    value: "38K+",
-    label: "YouTube Subscribers",
-    gradient: "bg-gradient-to-br from-red-50 to-red-100",
-    textClass: "text-red-600",
-    darkGradient: "dark:from-red-900/80 dark:to-red-950/80",
-    darkTextClass: "dark:text-red-400",
-  },
 ];
 
 interface AboutSectionProps {
@@ -52,9 +45,9 @@ interface AboutSectionProps {
 export default function AboutSection({ className }: AboutSectionProps) {
   return (
     <Section id="about" title="About Me" subtitle="Driven by Curiosity and a Passion for Innovation" className={className}>
-      <div className="grid md:grid-cols-5 gap-10 lg:gap-16 items-start">
+      <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
         {/* Left Column: Text */}
-        <div className="md:col-span-3 space-y-5">
+        <div className="space-y-5">
           <p className="text-lg leading-relaxed text-muted-foreground font-body">
             I am a Gold Medalist Electrical Engineer with a strong academic
             background, complemented by professional and research
@@ -74,21 +67,33 @@ export default function AboutSection({ className }: AboutSectionProps) {
             sustainability, entrepreneurship, and personal development.
           </p>
         </div>
-        {/* Right Column: Highlight Blocks */}
-        <div className="md:col-span-2 grid grid-cols-2 gap-6">
-          {highlightData.map((item, index) => (
-            <div
-              key={index}
-              className={`${item.gradient} ${item.darkGradient} p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300`}
-            >
-              <div className={`text-3xl font-bold ${item.textClass} ${item.darkTextClass} mb-2`}>
-                {item.value}
+        {/* Right Column: Highlight Blocks & Image */}
+        <div className="space-y-8">
+          <div className="grid grid-cols-3 gap-6">
+            {highlightData.map((item, index) => (
+              <div
+                key={index}
+                className={`${item.gradient} ${item.darkGradient} p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300`}
+              >
+                <div className={`text-3xl font-bold ${item.textClass} ${item.darkTextClass} mb-2`}>
+                  {item.value}
+                </div>
+                <div className="text-gray-700 dark:text-gray-300 text-sm">
+                  {item.label}
+                </div>
               </div>
-              <div className="text-gray-700 dark:text-gray-300 text-sm">
-                {item.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="relative mt-8 rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Gold_Medal_ysmgdg.jpg"
+              alt="Gold Medal awarded at convocation"
+              data-ai-hint="gold medal award"
+              width={500}
+              height={500}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </Section>
