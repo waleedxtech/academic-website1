@@ -58,11 +58,16 @@ A functional prototype of the complete system was fabricated and tested, success
   {
     slug: 'dc-ac-inverter',
     title: 'DC to AC Converter (Inverter)',
-    shortDescription: 'Designed, simulated, and implemented a PCB-based inverter for DC to AC power conversion with variable-frequency output.',
-    longDescription: 'This project involved the complete lifecycle of a DC to AC inverter, from design and simulation to PCB implementation. The inverter provides variable-frequency AC output, suitable for various applications requiring controlled power conversion.',
+    shortDescription: 'Designed a MOSFET-based H-bridge inverter with variable frequency output, simulated in MATLAB/Proteus, and implemented on a custom PCB with Arduino control.',
+    longDescription: [
+      'Designed a MOSFET-based full H-bridge inverter with variable frequency output (10 Hz to 100 kHz).',
+      'Developed gate drive circuits and generated gate pulses using an Arduino Nano microcontroller.',
+      'Simulated the inverter circuit using MATLAB and Proteus.',
+      'Designed and fabricated the PCB.'
+    ],
     imageUrls: [],
     imageHints: ['inverter circuit pcb'],
-    technologies: ['PCB Design', 'Power Electronics', 'Simulation (Multisim/Proteus)', 'Inverter Design', 'Circuit Implementation'],
+    technologies: ['Power Electronics', 'Inverter Design', 'MATLAB', 'Proteus', 'Arduino', 'PCB Design', 'Circuit Implementation'],
   },
   {
     slug: 'magnetic-levitation-system',
