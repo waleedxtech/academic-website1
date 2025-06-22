@@ -1,3 +1,4 @@
+
 import type { Project } from '@/types';
 
 export const projects: Project[] = [
@@ -5,7 +6,15 @@ export const projects: Project[] = [
     slug: 'resistance-butt-welding',
     title: 'Design and Development of Resistance Butt Welding Machine',
     shortDescription: 'Designed a high-current transformer, validated through simulations and Finite Element Analysis (FEA), developed mechanical components, and built a functional hardware prototype.',
-    longDescription: `The Resistance Butt Welding Machine was designed as a simplified and cost-effective solution tailored for local bulk production in cost-sensitive manufacturing environments. The aim was to introduce an economical alternative to complex commercial welding systems without compromising core functionality.\n\nTo ensure relevance and practicality, market research and an extensive literature review were conducted. This analysis helped identify the limitations of existing solutions, such as high cost, complexity, and limited adaptability for local manufacturing needs. Based on these insights, a new design approach was formulated that prioritized efficiency, affordability, and ease of fabrication.\n\nAt the heart of the system is a high-current transformer, which was custom-designed to deliver the required welding current. Its performance was validated through computer-based simulations and Finite Element Analysis (FEA), ensuring thermal and magnetic stability under operational conditions. The transformer was engineered to be compact yet powerful enough to support the resistance welding process reliably.\n\nIn addition to the electrical design, the mechanical structure of the machine was developed from the ground up. This included designing the frame, electrode holders, and the actuation mechanism necessary for the welding operation. Emphasis was placed on structural integrity and operational repeatability to ensure consistent weld quality across multiple uses.\n\nA functional prototype of the complete system was fabricated and tested, successfully demonstrating its capability to perform resistance butt welding operations. The project not only showcased the technical feasibility of a low-cost welding solution but also provided hands-on experience in transformer design, mechanical engineering, and practical system integration. The resulting machine serves as a viable option for small-scale industries and local manufacturers seeking affordable welding equipment for mass production.`,
+    longDescription: `The Resistance Butt Welding Machine was designed as a simplified and cost-effective solution tailored for local bulk production in cost-sensitive manufacturing environments. The aim was to introduce an economical alternative to complex commercial welding systems without compromising core functionality.
+
+To ensure relevance and practicality, market research and an extensive literature review were conducted. This analysis helped identify the limitations of existing solutions, such as high cost, complexity, and limited adaptability for local manufacturing needs. Based on these insights, a new design approach was formulated that prioritized efficiency, affordability, and ease of fabrication.
+
+At the heart of the system is a high-current transformer, which was custom-designed to deliver the required welding current. Its performance was validated through computer-based simulations and Finite Element Analysis (FEA), ensuring thermal and magnetic stability under operational conditions. The transformer was engineered to be compact yet powerful enough to support the resistance welding process reliably.
+
+In addition to the electrical design, the mechanical structure of the machine was developed from the ground up. This included designing the frame, electrode holders, and the actuation mechanism necessary for the welding operation. Emphasis was placed on structural integrity and operational repeatability to ensure consistent weld quality across multiple uses.
+
+A functional prototype of the complete system was fabricated and tested, successfully demonstrating its capability to perform resistance butt welding operations. The project not only showcased the technical feasibility of a low-cost welding solution but also provided hands-on experience in transformer design, mechanical engineering, and practical system integration. The resulting machine serves as a viable option for small-scale industries and local manufacturers seeking affordable welding equipment for mass production.`,
     imageUrls: [],
     imageHints: ['welding machine industrial'],
     technologies: ['FEA (ANSYS Maxwell)', 'Transformer Design', 'Mechanical Design', 'Prototyping', 'Circuit Simulation'],
@@ -38,7 +47,10 @@ export const projects: Project[] = [
       'Visualized predicted vs. actual loads with performance metrics for interpretability',
       'Practical, hands-on application of core ML skills: data simulation, feature engineering, model training, and evaluation'
     ],
-    imageUrls: [],
+    imageUrls: [
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1750576313/Project_12-1_slefen.png',
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1750576313/Project_12-2_wqotsk.png'
+    ],
     imageHints: ['load forecast graph', 'feature importance chart'],
     technologies: ['Python', 'scikit-learn', 'pandas', 'matplotlib', 'Machine Learning'],
     repoUrl: 'https://github.com/waleedx1/Smart-Grid-Load-Forecasting-using-Machine-Learning',
