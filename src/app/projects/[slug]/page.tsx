@@ -70,9 +70,9 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </h2>
         </div>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none mb-8 md:mb-12 font-body text-foreground">
+        <div className="max-w-none mb-8 md:mb-12 font-body text-foreground text-lg leading-relaxed">
           {project.longDescription.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="text-foreground/90">{paragraph}</p>
+            <p key={index} className="text-foreground/90 mb-6">{paragraph}</p>
           ))}
         </div>
         
