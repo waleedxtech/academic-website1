@@ -88,7 +88,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none flex items-center justify-center">
+              <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none shadow-none flex items-center justify-center">
                  <Image
                   src={project.imageUrl}
                   alt={project.title}
