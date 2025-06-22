@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const gradientBackground = "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-900 dark:to-sky-950/60";
   return (
-    <Section title="All Projects" subtitle="A Comprehensive Showcase of My Work" className={`py-16 md:py-20 ${gradientBackground}`}>
+    <Section title="All Projects" className={`py-16 md:py-20 ${gradientBackground}`}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <Button 
