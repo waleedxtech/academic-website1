@@ -1,6 +1,12 @@
-
 import Section from '@/components/ui/Section';
 import Image from 'next/image';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { X } from 'lucide-react';
 
 interface HighlightItem {
   value: string;
@@ -35,6 +41,21 @@ const highlightData: HighlightItem[] = [
     textClass: "text-purple-600",
     darkGradient: "dark:from-purple-900/80 dark:to-purple-950/80",
     darkTextClass: "dark:text-purple-400",
+  },
+];
+
+const aboutImages = [
+  {
+    src: "https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581915/Gold_Medal_1_square_dstekz.jpg",
+    highResSrc: "https://res.cloudinary.com/dcajabot9/image/upload/v1750581915/Gold_Medal_1_square_dstekz.jpg",
+    alt: "Receiving gold medal at convocation",
+    hint: "award ceremony",
+  },
+  {
+    src: "https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581916/Gold_Medal_2_square_gcg2ja.jpg",
+    highResSrc: "https://res.cloudinary.com/dcajabot9/image/upload/v1750581916/Gold_Medal_2_square_gcg2ja.jpg",
+    alt: "Waleed Abdullah with gold medal",
+    hint: "gold medal",
   },
 ];
 
@@ -85,26 +106,35 @@ export default function AboutSection({ className }: AboutSectionProps) {
             ))}
           </div>
           <div className="grid grid-cols-2 gap-4 mt-8">
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
-              <Image
-                src="https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581915/Gold_Medal_1_square_dstekz.jpg"
-                alt="Receiving gold medal at convocation"
-                data-ai-hint="award ceremony"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-500 ease-in-out group-hover:scale-105"
-              />
-            </div>
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group">
-              <Image
-                src="https://res.cloudinary.com/dcajabot9/image/upload/w_0.25,c_scale/v1750581916/Gold_Medal_2_square_gcg2ja.jpg"
-                alt="Waleed Abdullah with gold medal"
-                data-ai-hint="gold medal"
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-500 ease-in-out group-hover:scale-105"
-              />
-            </div>
+            {aboutImages.map((image, index) => (
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group cursor-pointer">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      data-ai-hint={image.hint}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none shadow-none flex items-center justify-center">
+                   <Image
+                    src={image.highResSrc}
+                    alt={image.alt}
+                    width={1080}
+                    height={1080}
+                    className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw] rounded-lg"
+                  />
+                  <DialogClose className="absolute right-4 top-4 rounded-full p-2 bg-black/50 text-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+                    <X className="h-6 w-6" />
+                    <span className="sr-only">Close</span>
+                  </DialogClose>
+                </DialogContent>
+              </Dialog>
+            ))}
           </div>
         </div>
       </div>
