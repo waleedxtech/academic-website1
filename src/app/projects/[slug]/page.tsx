@@ -1,7 +1,6 @@
 
 import { getProjectBySlug, projects } from '@/lib/data';
 import { notFound } from 'next/navigation';
-import Section from '@/components/ui/Section';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -27,9 +26,9 @@ export async function generateMetadata(
   return {
     title: `${project.title} - ElectronFlow`,
     description: project.shortDescription,
-    openGraph: {
-      images: [project.imageUrl],
-    },
+    // openGraph: {
+    //   images: [project.imageUrl],
+    // },
   };
 }
 
@@ -49,8 +48,9 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   const gradientBackground = "bg-gradient-to-br from-gray-50 to-blue-50 dark:from-neutral-900 dark:to-sky-950/60";
 
   return (
-    <Section title={project.title} className={`py-16 md:py-20 ${gradientBackground}`} subtitle={project.shortDescription} showDivider={false}>
-      <div className="max-w-4xl mx-auto">
+    <section className={`py-16 md:py-20 ${gradientBackground}`}>
+      <div className="container max-w-4xl mx-auto">
+
         <div className="mb-8">
           <Button 
             asChild 
@@ -62,6 +62,17 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               Back to All Projects
             </Link>
           </Button>
+        </div>
+
+        <div className="mb-12 md:mb-16 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight font-headline">
+              {project.title}
+            </h2>
+            {project.shortDescription && (
+              <p className="mt-3 text-lg md:text-xl text-muted-foreground">
+                {project.shortDescription}
+              </p>
+            )}
         </div>
 
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8 md:mb-12 font-body text-foreground">
@@ -107,6 +118,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           )}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
