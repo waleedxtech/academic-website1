@@ -53,7 +53,6 @@ A functional prototype of the complete system was fabricated and tested, success
     ],
     imageHints: ['load forecast graph', 'feature importance chart'],
     technologies: ['Python', 'scikit-learn', 'pandas', 'matplotlib', 'Machine Learning'],
-    repoUrl: 'https://github.com/waleedx1/Smart-Grid-Load-Forecasting-using-Machine-Learning',
   },
   {
     slug: 'dc-ac-inverter',
@@ -127,7 +126,11 @@ This project involved designing, simulating, and analyzing both modulators to un
       'Fabricated a PCB for the final circuit.',
       'Suitable for powering low-voltage electronic devices.',
     ],
-    imageUrls: [],
+    imageUrls: [
+        'https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Project_4-1-1_final1_rwqywk.jpg',
+        'https://res.cloudinary.com/dcajabot9/image/upload/v1750576096/Project_4-1-2hardware_simulation_xooejx.jpg'
+    ],
+    imageHints: ['circuit pcb', 'circuit simulation'],
     technologies: ['Power Electronics', 'Circuit Design', 'PCB Design', 'Rectifiers', 'Voltage Regulation'],
   },
   {

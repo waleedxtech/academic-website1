@@ -11,11 +11,11 @@ interface Hobby {
 const hobbiesData: Hobby[] = [
   { name: "Owning and managing a YouTube channel with 38K+ subscribers", icon: Youtube },
   { name: "Exploring emerging technologies (Agentic AI, LLMs, Blockchain, Smart Grids, IBRs, Grid-Forming Inverters)", icon: Lightbulb },
-  { name: "Focusing on sustainability and green technologies", icon: Leaf },
+  { name: "Sustainability and green technologies", icon: Leaf },
   { name: "Engaging in personal development and continuous learning", icon: UserCheck },
   { name: "Maintaining an active lifestyle through fitness", icon: HeartPulse },
   { name: "Exploring innovative business ideas and entrepreneurship", icon: Briefcase },
-  { name: "Enhancing financial literacy", icon: DollarSign },
+  { name: "Financial literacy", icon: DollarSign },
   { name: "Enjoying outdoor exploration and discovering new places", icon: Mountain },
   { name: "Building connections through professional networking", icon: NetworkingIcon }
 ];
@@ -26,7 +26,7 @@ interface HobbiesSectionProps {
 
 export default function HobbiesSection({ className }: HobbiesSectionProps) {
   return (
-    <Section id="hobbies" title="Hobbies & Interests" subtitle="What I Do Outside of Engineering" className={className}>
+    <Section id="hobbies" title="Hobbies & Interests" className={className}>
       <Card className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg">
         <CardContent className="p-6 md:p-8">
           <ul className="space-y-4">
@@ -46,3 +46,4 @@ export default function HobbiesSection({ className }: HobbiesSectionProps) {
     </Section>
   );
 }
+
