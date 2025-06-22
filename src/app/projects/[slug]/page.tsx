@@ -73,31 +73,33 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
             </h2>
         </div>
 
-        {project.imageUrl && project.slug === 'solid-state-dc-breaker' && (
-          <div className="my-12">
-            <Dialog>
-              <DialogTrigger asChild>
-                <div className="relative max-w-md mx-auto rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.title}
-                    data-ai-hint={project.imageHint || 'project image'}
-                    width={1080}
-                    height={756}
-                    className="w-full h-auto transition-transform duration-300 ease-in-out group-hover:scale-105"
+        {project.imageUrls && project.imageUrls.length > 0 && (
+          <div className="my-12 space-y-8">
+            {project.imageUrls.map((url, index) => (
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <div className="relative max-w-2xl mx-auto rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
+                    <Image
+                      src={url}
+                      alt={`${project.title} - image ${index + 1}`}
+                      data-ai-hint={project.imageHints?.[index] || 'project image'}
+                      width={1080}
+                      height={756}
+                      className="w-full h-auto transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    />
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none shadow-none flex items-center justify-center">
+                   <Image
+                    src={url}
+                    alt={`${project.title} - image ${index + 1}`}
+                    width={1920}
+                    height={1080}
+                    className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw]"
                   />
-                </div>
-              </DialogTrigger>
-              <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none shadow-none flex items-center justify-center">
-                 <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  width={1920}
-                  height={1080}
-                  className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw]"
-                />
-              </DialogContent>
-            </Dialog>
+                </DialogContent>
+              </Dialog>
+            ))}
           </div>
         )}
 
