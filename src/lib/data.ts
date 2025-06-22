@@ -82,10 +82,53 @@ A functional prototype of the complete system was fabricated and tested, success
     slug: 'home-automation-stm32',
     title: 'Home Automation using STM32F1 Microcontroller',
     shortDescription: 'Developed a home automation system using STM32F1 microcontroller and Android phone. Enabled wireless control of home appliances via mobile interface.',
-    longDescription: 'This project demonstrates a basic home automation system using the STM32F1 microcontroller and an Android mobile application. The goal was to enable wireless control of home appliances to enhance convenience and accessibility.\n\nA Bluetooth module was interfaced with the STM32F1, allowing communication between the mobile phone and the microcontroller. Through a custom-built Android app, users could send commands to switch devices on or off in real time. The STM32 received and processed these commands to control relays connected to various electrical loads.\n\nThis project showcases fundamental concepts of IoT, embedded systems, and human-machine interaction. It provided hands-on experience with microcontroller programming, wireless communication, and system integration for smart home applications.',
+    longDescription: `This project demonstrates a basic home automation system using the STM32F1 microcontroller and an Android mobile application. The goal was to enable wireless control of home appliances to enhance convenience and accessibility.
+
+A Bluetooth module was interfaced with the STM32F1, allowing communication between the mobile phone and the microcontroller. Through a custom-built Android app, users could send commands to switch devices on or off in real time. The STM32 received and processed these commands to control relays connected to various electrical loads.
+
+This project showcases fundamental concepts of IoT, embedded systems, and human-machine interaction. It provided hands-on experience with microcontroller programming, wireless communication, and system integration for smart home applications.`,
     imageUrls: [],
     imageHints: ['home automation app'],
     technologies: ['STM32', 'Embedded Systems', 'Android Development', 'Bluetooth', 'IoT'],
+  },
+  {
+    slug: 'bfsk-bpsk-modulator',
+    title: 'BFSK and BPSK Modulator',
+    shortDescription: 'Implemented BFSK and BPSK digital modulators to represent binary data using frequency and phase shifts, respectively. Demonstrated their characteristics and applications in communication systems.',
+    longDescription: `This project focused on the implementation and analysis of two fundamental digital modulation schemes: Binary Frequency Shift Keying (BFSK) and Binary Phase Shift Keying (BPSK).
+
+BFSK represents binary data by shifting between two distinct frequencies. A higher frequency corresponds to binary 1, while a lower frequency represents binary 0. This modulation technique is relatively simple, robust against noise, and is frequently used in low-data-rate communication applications such as remote controls and paging systems.
+
+In contrast, BPSK represents binary data by changing the phase of a carrier signal. A 0-degree phase represents a binary 1, and a 180-degree phase represents a binary 0. BPSK provides better spectral efficiency and improved resistance to noise compared to BFSK, making it suitable for high-reliability systems such as wireless and satellite communications.
+
+This project involved designing, simulating, and analyzing both modulators to understand their operational principles, strengths, and application scenarios in digital communication.`,
+    imageUrls: [],
+    technologies: ['Digital Modulation', 'Communication Systems', 'Signal Processing', 'BFSK', 'BPSK'],
+  },
+  {
+    slug: 'bus-reservation-system',
+    title: 'Bus Reservation System using C++',
+    shortDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using CNIC.',
+    longDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using CNIC.',
+    imageUrls: [],
+    technologies: ['C++', 'Object-Oriented Programming', 'Data Structures', 'File Handling'],
+  },
+  {
+    slug: 'dc-power-supply',
+    title: '220V AC To Variable 0-12V DC Converter (DC Power Supply)',
+    shortDescription: 'Designed a PCB-based 0–12V, 1A variable DC power supply using AC step-down, rectification, filtering, and regulation, verified through simulation and hardware testing.',
+    longDescription: [
+      'Design and Implementation of a Variable AC to DC Power Supply',
+      'Designed a 0–12V variable DC power supply with 1A current output.',
+      'Incorporated transformer-based voltage reduction and diode bridge rectification.',
+      'Used a filter capacitor for waveform smoothing.',
+      'Implemented voltage regulation using a variable regulator and potentiometer.',
+      'Verified performance through simulations and hardware testing.',
+      'Fabricated a PCB for the final circuit.',
+      'Suitable for powering low-voltage electronic devices.',
+    ],
+    imageUrls: [],
+    technologies: ['Power Electronics', 'Circuit Design', 'PCB Design', 'Rectifiers', 'Voltage Regulation'],
   },
 ];
 
