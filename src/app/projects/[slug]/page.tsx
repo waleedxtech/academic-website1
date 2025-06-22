@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import type { Metadata, ResolvingMetadata } from 'next';
+import Image from 'next/image';
 
 type Props = {
   params: { slug: string };
@@ -66,6 +67,19 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               {project.title}
             </h2>
         </div>
+
+        {project.imageUrl && project.slug === 'solid-state-dc-breaker' && (
+          <div className="my-12">
+            <Image
+              src={project.imageUrl}
+              alt={project.title}
+              data-ai-hint={project.imageHint || 'project image'}
+              width={1080}
+              height={756}
+              className="rounded-xl shadow-lg w-full h-auto"
+            />
+          </div>
+        )}
 
         <div className="max-w-none mb-8 md:mb-12 font-body text-foreground text-lg leading-relaxed">
           {Array.isArray(project.longDescription) ? (

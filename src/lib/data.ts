@@ -22,8 +22,8 @@ export const projects: Project[] = [
       'The breaker not only interrupts fault current but also recharges the commutation capacitor to enable rebreaking.',
       'Demonstrates rebreaking capability not available in existing DC circuit breakers.',
     ],
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'circuit breaker electronics',
+    imageUrl: 'https://res.cloudinary.com/dcajabot9/image/upload/v1750576112/Project_11_SSDCCB_fieuiy.jpg',
+    imageHint: 'circuit breaker diagram',
     technologies: ['Simulink/MATLAB', 'Power Electronics', 'Circuit Design', 'Fault Interruption', 'Control Systems'],
   },
   {
