@@ -13,8 +13,8 @@ interface ResearchItem {
 const researchData: ResearchItem[] = [
   {
     title: 'Design and Development of Resistance Butt Welding Machine',
-    subtitle: 'Final Year Project - University of Lahore',
-    period: 'During B.Sc. (2016-2020)',
+    subtitle: 'Undergraduate Final Year Project - University of Lahore',
+    period: '2020',
     description: [
       'Introduced a simplified and economical butt welding machine design suitable for local bulk production, targeting cost-sensitive manufacturing environments.',
       'Conducted market research and literature review to assess existing technologies.',
@@ -26,7 +26,7 @@ const researchData: ResearchItem[] = [
   {
     title: 'Design and Development of Solid-State DC Circuit Breaker',
     subtitle: 'Academic Research Project',
-    period: 'During B.Sc. (2016-2020)',
+    period: '2022',
     description: [
       'Proposed a solid-state DC circuit breaker with low conduction loss, quick reclosing, and rebreaking capability to address control and stability challenges in DC power systems.',
       'Verified operating modes and performance through Simulink/MATLAB simulations.',
