@@ -68,16 +68,16 @@ export default function AboutSection({ className }: AboutSectionProps) {
         </div>
         {/* Right Column: Highlight Blocks & Image */}
         <div className="space-y-8">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="flex justify-center gap-4 sm:gap-6">
             {highlightData.map((item, index) => (
               <div
                 key={index}
-                className={`${item.gradient} ${item.darkGradient} p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300`}
+                className={`${item.gradient} ${item.darkGradient} rounded-lg hover:shadow-lg transition-shadow duration-300 flex flex-col justify-center items-center p-2 text-center aspect-square w-24 sm:w-28`}
               >
-                <div className={`text-3xl font-bold ${item.textClass} ${item.darkTextClass} mb-2`}>
+                <div className={`text-xl sm:text-2xl font-bold ${item.textClass} ${item.darkTextClass}`}>
                   {item.value}
                 </div>
-                <div className="text-gray-700 dark:text-gray-300 text-sm">
+                <div className="text-gray-700 dark:text-gray-300 text-xs leading-tight mt-1">
                   {item.label}
                 </div>
               </div>
