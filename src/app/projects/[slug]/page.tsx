@@ -4,13 +4,14 @@ import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, X } from 'lucide-react';
 import type { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 
 type Props = {
@@ -74,11 +75,11 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
 
         {project.imageUrls && project.imageUrls.length > 0 && (
-          <div className="my-12 space-y-8">
+          <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {project.imageUrls.map((url, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
-                  <div className="relative max-w-2xl mx-auto rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
                     <Image
                       src={url}
                       alt={`${project.title} - image ${index + 1}`}
@@ -97,6 +98,10 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     height={1080}
                     className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw]"
                   />
+                  <DialogClose className="absolute right-4 top-4 rounded-full p-2 bg-black/50 text-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+                    <X className="h-6 w-6" />
+                    <span className="sr-only">Close</span>
+                  </DialogClose>
                 </DialogContent>
               </Dialog>
             ))}

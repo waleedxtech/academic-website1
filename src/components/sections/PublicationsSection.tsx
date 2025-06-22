@@ -45,7 +45,7 @@ interface PublicationsSectionProps {
 
 export default function PublicationsSection({ className }: PublicationsSectionProps) {
   return (
-    <Section id="publications" title="Publications" subtitle="My Contributions to Electrical Engineering Research" className={className}>
+    <Section id="publications" title="Publications" className={className}>
       <div className="space-y-8">
         {publicationData.map((item, index) => (
           <Card 
