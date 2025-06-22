@@ -72,9 +72,9 @@ A functional prototype of the complete system was fabricated and tested, success
   {
     slug: 'magnetic-levitation-system',
     title: 'Magnetic Levitation System',
-    shortDescription: 'Developed an analog PID controller circuit and levitation system, achieving stable levitation of a metallic object.',
-    longDescription: 'A hands-on project to understand and implement control systems principles. An analog PID controller circuit was designed and built to control electromagnets, successfully achieving stable levitation of a metallic object by precisely managing magnetic fields.',
-    imageUrls: [],
+    shortDescription: 'Developed an analog PID controller circuit and levitation system, and successfully achieved stable levitation of a metallic object.',
+    longDescription: 'This project involved the development of a magnetic levitation system regulated by an analog PID controller. The control strategy was implemented entirely using discrete analog components, emphasizing practical realization of continuous-time control principles. The system maintained stable levitation of a metallic object by dynamically adjusting the electromagnetic force in response to position feedback. Precise tuning of proportional, integral, and derivative elements was essential to ensure a fast, stable response with minimal oscillations. The successful operation of the system validated the effectiveness of analog PID control in managing nonlinear physical systems and highlighted its relevance for applications requiring real-time analog signal processing.',
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576105/Project_8_maglev_jymw0f.jpg'],
     imageHints: ['levitating object magnet'],
     technologies: ['Analog PID Control', 'Control Systems', 'Electromagnetism', 'Circuit Design', 'Sensors'],
   },
