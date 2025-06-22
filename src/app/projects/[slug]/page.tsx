@@ -77,7 +77,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8 md:mb-12 font-body text-foreground">
           {project.longDescription.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="lead text-lg md:text-xl text-muted-foreground">{paragraph}</p>
+            <p key={index} className="text-foreground/90">{paragraph}</p>
           ))}
           {project.details && (
             <>
