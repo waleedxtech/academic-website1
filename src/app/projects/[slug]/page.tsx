@@ -77,7 +77,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           <div className="my-12">
             <Dialog>
               <DialogTrigger asChild>
-                <div className="relative max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
+                <div className="relative max-w-md mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -88,13 +88,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-5xl w-full p-0 bg-transparent border-none">
+              <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none flex items-center justify-center">
                  <Image
                   src={project.imageUrl}
                   alt={project.title}
                   width={1920}
                   height={1080}
-                  className="rounded-lg w-full h-auto"
+                  className="rounded-lg object-contain h-full w-full"
                 />
               </DialogContent>
             </Dialog>
