@@ -88,13 +88,13 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none flex items-center justify-center">
+              <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none flex items-center justify-center">
                  <Image
                   src={project.imageUrl}
                   alt={project.title}
                   width={1920}
                   height={1080}
-                  className="rounded-lg object-contain h-full w-full"
+                  className="rounded-lg object-contain h-auto w-auto max-h-[90vh] max-w-[90vw]"
                 />
               </DialogContent>
             </Dialog>
