@@ -7,6 +7,11 @@ import Link from 'next/link';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import type { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type Props = {
   params: { slug: string };
@@ -70,14 +75,29 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
         {project.imageUrl && project.slug === 'solid-state-dc-breaker' && (
           <div className="my-12">
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              data-ai-hint={project.imageHint || 'project image'}
-              width={1080}
-              height={756}
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="relative max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    data-ai-hint={project.imageHint || 'project image'}
+                    width={1080}
+                    height={756}
+                    className="w-full h-auto transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="max-w-5xl w-full p-0 bg-transparent border-none">
+                 <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  width={1920}
+                  height={1080}
+                  className="rounded-lg w-full h-auto"
+                />
+              </DialogContent>
+            </Dialog>
           </div>
         )}
 
