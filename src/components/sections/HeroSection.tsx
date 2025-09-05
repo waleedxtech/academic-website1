@@ -15,10 +15,11 @@ export default function HeroSection() {
                 src="https://res.cloudinary.com/dcajabot9/image/upload/v1750574547/Display_Photo_1_g5f9xj.webp"
                 alt="W. Abdullah - Electrical Engineer"
                 data-ai-hint="profile portrait"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
                 className="transform transition-all duration-500 ease-in-out group-hover:scale-105"
                 priority
+                unoptimized
               />
             </div>
           </div>

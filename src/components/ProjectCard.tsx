@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import type { Project } from '@/types';
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from '@/components/ui/card';
@@ -22,6 +21,17 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
       )}
       style={style}
     >
+      {/* Image Section */}
+      {project.imageUrl && (
+        <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden rounded-t-xl">
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105"
+          />
+        </div>
+      )}
+
       <CardContent className="p-6 flex-grow space-y-3">
         <CardTitle className="text-xl font-bold font-headline text-card-foreground mb-1">{project.title}</CardTitle>
         <CardDescription className="text-muted-foreground text-sm leading-relaxed font-body">
@@ -41,6 +51,7 @@ export default function ProjectCard({ project, className, style }: ProjectCardPr
           </div>
         </div>
       </CardContent>
+
       <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-between gap-3">
         <Button 
           asChild 

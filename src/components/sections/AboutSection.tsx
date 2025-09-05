@@ -1,5 +1,4 @@
 import Section from '@/components/ui/Section';
-import Image from 'next/image';
 import {
   Dialog,
   DialogContent,
@@ -65,7 +64,12 @@ interface AboutSectionProps {
 
 export default function AboutSection({ className }: AboutSectionProps) {
   return (
-    <Section id="about" title="About Me" subtitle="Driven by Curiosity and a Passion for Innovation" className={className}>
+    <Section
+      id="about"
+      title="About Me"
+      subtitle="Driven by Curiosity and a Passion for Innovation"
+      className={className}
+    >
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
         {/* Left Column: Text */}
         <div className="space-y-5">
@@ -88,7 +92,8 @@ export default function AboutSection({ className }: AboutSectionProps) {
             sustainability, entrepreneurship, and personal development.
           </p>
         </div>
-        {/* Right Column: Highlight Blocks & Image */}
+
+        {/* Right Column: Highlight Blocks & Images */}
         <div className="space-y-8">
           <div className="flex justify-center gap-4 sm:gap-6">
             {highlightData.map((item, index) => (
@@ -105,28 +110,27 @@ export default function AboutSection({ className }: AboutSectionProps) {
               </div>
             ))}
           </div>
+
           <div className="grid grid-cols-2 gap-4 mt-8">
             {aboutImages.map((image, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>
                   <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg group cursor-pointer">
-                    <Image
+                    <img
                       src={image.src}
                       alt={image.alt}
                       data-ai-hint={image.hint}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      unoptimized
                     />
                   </div>
                 </DialogTrigger>
                 <DialogContent className="max-w-none w-auto h-auto p-0 bg-transparent border-none shadow-none flex items-center justify-center">
-                   <Image
+                  <img
                     src={image.highResSrc}
                     alt={image.alt}
-                    width={1080}
-                    height={1080}
                     className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw] rounded-lg"
+                    unoptimized
                   />
                   <DialogClose className="absolute right-4 top-4 rounded-full p-2 bg-black/50 text-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
                     <X className="h-6 w-6" />

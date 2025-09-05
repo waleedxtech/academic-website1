@@ -87,6 +87,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                       width={1080}
                       height={756}
                       className="w-full h-auto transition-transform duration-300 ease-in-out group-hover:scale-105"
+                      unoptimized
                     />
                   </div>
                 </DialogTrigger>
@@ -97,6 +98,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                     width={1920}
                     height={1080}
                     className="object-contain h-auto w-auto max-h-[90vh] max-w-[90vw]"
+                    unoptimized
                   />
                   <DialogClose className="absolute right-4 top-4 rounded-full p-2 bg-black/50 text-white opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
                     <X className="h-6 w-6" />
