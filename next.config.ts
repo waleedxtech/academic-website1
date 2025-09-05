@@ -3,7 +3,6 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: '/academic-website1',
   /* config options here */
   typescript: {
     ignoreBuildErrors: true,
