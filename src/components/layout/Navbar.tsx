@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { href: '/#about', label: 'About' },
-  { href: '/#research', label: 'Research' },
-  { href: '/#publications', label: 'Publications' },
-  { href: '/#experience', label: 'Experience' },
-  { href: '/#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#research', label: 'Research' },
+  { href: '#publications', label: 'Publications' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
 ];
 
 export default function Navbar() {
