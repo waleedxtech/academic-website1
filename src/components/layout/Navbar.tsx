@@ -5,12 +5,15 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
+import { usePathname } from 'next/navigation'; // Import usePathname
+
 const navItems = [
-  { href: '#about', label: 'About' },
-  { href: '#research', label: 'Research' },
-  { href: '#publications', label: 'Publications' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
+  { href: '/', label: 'Home' },
+   { href: '/#about', label: 'About' },
+  { href: '/#research', label: 'Research' },
+  { href: '/#publications', label: 'Publications' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#projects', label: 'Projects' },
 ];
 
 export default function Navbar() {
