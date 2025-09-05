@@ -17,8 +17,11 @@ const courseworkData = [
 interface CourseworkSectionProps {
   className?: string;
 }
+const SHOW_COURSEWORK = false; // change to true to enable
 
 export default function CourseworkSection({ className }: CourseworkSectionProps) {
+  if (!SHOW_COURSEWORK) return null;
+
   return (
     <Section id="coursework" title="Relevant Coursework" subtitle="" className={className}>
       <div className="flex flex-wrap justify-center gap-3 md:gap-4">

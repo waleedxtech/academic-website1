@@ -75,7 +75,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </div>
 
         {project.imageUrls && project.imageUrls.length > 0 && (
-          <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="my-12 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             {project.imageUrls.map((url, index) => (
               <Dialog key={index}>
                 <DialogTrigger asChild>

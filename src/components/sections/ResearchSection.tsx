@@ -28,7 +28,7 @@ const researchData: ResearchItem[] = [
     subtitle: 'Academic Research Project',
     period: '2022',
     description: [
-      'Proposed a solid-state DC circuit breaker with low conduction loss, quick reclosing, and rebreaking capability to address control and stability challenges in DC power systems.',
+      'Designed and developed a solid-state DC circuit breaker with low conduction loss, quick reclosing, and rebreaking capability to address control and stability challenges in DC power systems.',
       'Verified operating modes and performance through Simulink/MATLAB simulations.',
       'Designed the breaker to interrupt and clear faults within approximately 200 µs, significantly reducing potential damage compared to mechanical breakers.',
       'Incorporated a recharging mechanism for the commutation capacitor, enabling rebreaking capability absent in conventional DC circuit breakers.',

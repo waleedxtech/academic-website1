@@ -38,22 +38,45 @@ A functional prototype of the complete system was fabricated and tested, success
   {
     slug: 'smart-grid-load-forecasting',
     title: 'Smart Grid Load Forecasting using Machine Learning',
-    shortDescription: 'Developed a Random Forest Regressor achieving 8.16 MW MAE (4.1%) and 10.23 MW RMSE (5.1%) on 200MW load data. Engineered 5 temporal features (hour/day/month/year/holidays) and visualized predictions vs. actuals with embedded metrics. Tools: Python (scikit-learn, pandas, matplotlib).',
+    shortDescription: 'Developed a machine learning model to forecast electricity load in the Netherlands using 6 years of real-world data. The project involved preprocessing, feature engineering, and building models from a Linear Regression baseline to an optimized XGBoost model. The final model significantly improved accuracy with R² = 0.9818, MAE = 178.36 MW, and RMSE = 262.63 MW, representing ~47% MAE and ~43% RMSE improvements..',
     longDescription: [
-      'Built a Random Forest model to forecast hourly electricity demand using synthetic smart grid data',
-      'Used 21,900 hourly data points (2.5 years) with seasonality and noise on a 200 MW baseline',
-      'Engineered key temporal features: hour, day, month, year, and holiday indicators',
-      'Model Performance: MAE of 8.16 MW (4.1%) and RMSE of 10.23 MW (5.1%)',
-      'Visualized predicted vs. actual loads with performance metrics for interpretability',
-      'Practical, hands-on application of core ML skills: data simulation, feature engineering, model training, and evaluation'
+      'Developed a machine learning model to predict future electricity load for the Netherlands in a smart grid context',
+      'Utilized ENTSO-E dataset with 201,604 entries at 15-minute intervals (2014–2020), including load, solar, and wind generation data',
+      'Preprocessed data with timestamp conversion, chronological indexing, and time-based interpolation to handle missing values',
+      'Engineered temporal features (hour, day, month, year, holidays, weekends), synthetic temperature features, and lagged load/temperature features for time-series forecasting',
+      'Baseline Model: Linear Regression achieved R² = 0.9447, MAE = 334.71 MW, RMSE = 457.78 MW',
+      'Advanced Model: XGBoost achieved R² = 0.9818, MAE = 178.36 MW, RMSE = 262.63 MW, improving accuracy by ~47% (MAE) and ~43% (RMSE) over baseline',
+      'Feature importance analysis highlighted lagged load values, holidays, and cyclical time features as key drivers of electricity demand',
+      'Demonstrated the effectiveness of feature engineering and non-linear models in capturing complex load patterns',
+      'Gained hands-on ML experience with complete machine learning pipeline: data preprocessing, feature engineering, baseline model selection, metric evaluation, advanced model experimentation, iterative evaluation, overfitting/underfitting handling',
+      'Lagged load values, holidays, and cyclical time features significantly influence electricity demand',
+      'Feature engineering plays a critical role in improving predictive accuracy for time-series data',
+      'Non-linear models like XGBoost outperform traditional linear regression in capturing complex load patterns',
+      'External real-world factors (e.g., temperature, holidays) must be considered for robust smart grid forecasting',
+      'Data preprocessing and handling missing values are essential for reliable machine learning models'
     ],
     imageUrls: [
-      'https://res.cloudinary.com/dcajabot9/image/upload/v1750576313/Project_12-1_slefen.png',
-      'https://res.cloudinary.com/dcajabot9/image/upload/v1750576313/Project_12-2_wqotsk.png'
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1756938923/5_ddih65.png',
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1756938924/4_yjtd2n.png',
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1756938923/1_gcsesd.png',
+      'https://res.cloudinary.com/dcajabot9/image/upload/v1756938923/2_ewhv2i.png'
     ],
-    imageHints: ['load forecast graph', 'feature importance chart'],
-    technologies: ['Python', 'scikit-learn', 'pandas', 'matplotlib', 'Machine Learning'],
-  },
+    imageHints: [
+      'load forecast graph',
+      'feature importance chart',
+      'predicted vs actual load',
+      'time-series feature visualization',
+      'model performance metrics'
+    ],
+    technologies: [
+      'Python',
+      'scikit-learn',
+      'pandas',
+      'matplotlib',
+      'Machine Learning'
+    ]
+},
+
   {
     slug: 'dc-ac-inverter',
     title: 'DC to AC Converter (Inverter)',
@@ -64,7 +87,7 @@ A functional prototype of the complete system was fabricated and tested, success
       'Simulated the inverter circuit using MATLAB and Proteus.',
       'Designed and fabricated the PCB, followed by successful hardware implementation.'
     ],
-    imageUrls: [],
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576117/Project_9_Inverter_al7gus.jpg'],
     imageHints: ['inverter circuit pcb'],
     technologies: ['Power Electronics', 'Inverter Design', 'MATLAB', 'Proteus', 'Arduino', 'PCB Design', 'Circuit Implementation'],
   },
@@ -78,6 +101,29 @@ A functional prototype of the complete system was fabricated and tested, success
     technologies: ['Analog PID Control', 'Control Systems', 'Electromagnetism', 'Circuit Design', 'Sensors'],
   },
   {
+    slug: 'line-following-robot',
+    title: 'Line Following Robot Using STM32F1 Microcontroller',
+    shortDescription: 'A line-following robot using STM32F1 and IR sensors autonomously tracked a path with real-time control, motor drivers, and a regulated power supply.',
+    longDescription: `A line-following robot utilizing the STM32F1 microcontroller. The robot was designed to detect and follow a black line path using infrared sensors and respond in real-time through a programmed control algorithm.
+
+The robot’s hardware setup included IR sensors for line detection, motor drivers for movement, and a regulated power supply for reliable operation. The STM32F1 processed sensor data to determine directional movement and adjusted the motors accordingly to maintain alignment with the line.
+
+Hands-on experience with core embedded system skills including sensor interfacing, real-time algorithm development, and motor control. It also provided practical experience in autonomous robotics and STM32 microcontroller programming.`,
+    imageUrls: ['https://res.cloudinary.com/dcajabot9/image/upload/v1750576097/Project_6_LFR_lqrfa0.jpg'],
+    technologies: [
+        'STM32F1 Microcontroller',
+        'Embedded C Programming',
+        'Infrared (IR) Sensors',
+        'Motor Driver Circuits',
+        'Real-Time Control Algorithms',
+        'Power Electronics (Regulated Power Supply)',
+        'Autonomous Robotics',
+        'Sensor Interfacing',
+        'Motor Control Systems'
+    ],
+},
+
+  {
     slug: 'home-automation-stm32',
     title: 'Home Automation using STM32F1 Microcontroller',
     shortDescription: 'Developed a home automation system using STM32F1 microcontroller and Android phone. Enabled wireless control of home appliances via mobile interface.',
@@ -90,6 +136,9 @@ This project showcases fundamental concepts of IoT, embedded systems, and human-
     imageHints: ['home automation app'],
     technologies: ['STM32', 'Embedded Systems', 'Android Development', 'Bluetooth', 'IoT'],
   },
+
+  
+
   {
     slug: 'bfsk-bpsk-modulator',
     title: 'BFSK and BPSK Modulator',
@@ -107,8 +156,8 @@ This project involved designing, simulating, and analyzing both modulators to un
   {
     slug: 'bus-reservation-system',
     title: 'Bus Reservation System using C++',
-    shortDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using CNIC.',
-    longDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using CNIC.',
+    shortDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using national identity number.',
+    longDescription: 'A Bus Reservation System to simulate a bus ticketing system. Features include seat booking, ticket cancellation, route management, and passenger data handling using national identity number.',
     imageUrls: [],
     technologies: ['C++', 'Object-Oriented Programming', 'Data Structures', 'File Handling'],
   },
