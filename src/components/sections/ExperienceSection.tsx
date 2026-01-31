@@ -1,10 +1,10 @@
-
 import Section from '@/components/ui/Section';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Briefcase, CalendarDays, Trophy } from 'lucide-react'; 
 
-interface InternshipItem {
-  type: 'Internship';
+// Updated interface to accommodate full-time work
+interface ExperienceItem {
+  type: string;
   title: string;
   organization: string; 
   period: string; 
@@ -12,7 +12,15 @@ interface InternshipItem {
   description: string | string[];
 }
 
-const internshipData: InternshipItem[] = [
+const experienceData: ExperienceItem[] = [
+  {
+    type: 'Full-time',
+    title: 'Electrical Engineer',
+    organization: 'Firestone Engineering Technologies',
+    period: '2020 – Present',
+    location: 'Lahore, Pakistan',
+    description: 'Design, installation, testing, commissioning, and maintenance of electrical systems for fire safety equipment in commercial and industrial facilities.',
+  },
   {
     type: 'Internship',
     title: 'Internship – LESCO, 132kV Substation',
@@ -39,7 +47,7 @@ export default function ExperienceSection({ className }: ExperienceSectionProps)
   return (
     <Section id="experience" title="Work Experience" subtitle="" className={className}>
       <div className="space-y-8">
-        {internshipData.map((item, index) => (
+        {experienceData.map((item, index) => (
           <Card 
             key={index} 
             className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group animate-fade-in relative overflow-hidden"
