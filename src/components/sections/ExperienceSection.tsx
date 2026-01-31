@@ -17,9 +17,9 @@ const experienceData: ExperienceItem[] = [
     type: 'Full-time',
     title: 'Electrical Engineer',
     organization: 'Firestone Engineering Technologies',
-    period: '2020 – Present',
+    period: 'Jul. 2020 – Present',
     location: 'Lahore, Pakistan',
-    description: 'Design, installation, testing, commissioning, and maintenance of electrical systems for fire safety equipment in commercial and industrial facilities.',
+    description: 'Design and installation of electrical systems for fire safety equipment in commercial and industrial facilities.',
   },
   {
     type: 'Internship',
